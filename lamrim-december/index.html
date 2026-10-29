@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Практики системы семян для ежедневной жизни</title>
+<meta name="description" content="Медитация Pro: шаматха, мудрость и путь к прямому восприятию пустоты. 19–21 декабря, Вена + онлайн, с Питером и Марией Мёртл.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Практики системы семян для ежедневной жизни">
+<meta property="og:description" content="Медитация Pro: шаматха, мудрость и путь к прямому восприятию пустоты. 19–21 декабря, Вена + онлайн, с Питером и Марией Мёртл.">
+<meta property="og:image" content="img/arizona-pair-hd.jpg">
+<meta name="theme-color" content="#1a1012">
+<link rel="icon" type="image/png" href="img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+Tibetan:wght@500&display=swap">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#1a1012;
+  --ink-2:#24161a;
+  --ink-3:#2f1d22;
+  --burg:#69232d;
+  --burg-2:#8a3340;
+  --gold:#ddae35;
+  --gold-d:#a8780f;
+  --gold-l:#f3d991;
+  --rose:#e8b9a8;
+  --rose-l:#f6dcd2;
+  --cream:#f5efe6;
+  --cream-2:#ece3d5;
+  --white:#fffdf9;
+  --text-d:#1f1416;
+  --text-dm:#5a4649;
+  --text-l:#f7efe6;
+  --text-lm:#cdbdb7;
+  --line-l:rgba(247,239,230,.14);
+  --line-d:rgba(31,20,22,.13);
+  --r-mega:40px;
+  --r-card:28px;
+  --pad:clamp(16px,4vw,56px);
+  --display:'Unbounded',system-ui,sans-serif;
+  --sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --tib:'Noto Serif Tibetan',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--text-l);font-family:var(--sans);font-size:17px;line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:76rem;margin:0 auto;padding:0 var(--pad)}
+.grad{background:linear-gradient(100deg,var(--gold-l) 0%,var(--gold) 40%,var(--rose) 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.cream .grad{background-image:linear-gradient(100deg,var(--burg) 0%,var(--burg-2) 50%,var(--gold-d) 100%)}
+.cream .card-k .grad{background-image:linear-gradient(100deg,var(--gold-l) 0%,var(--gold) 40%,var(--rose) 100%)}
+.nc{text-transform:none}
+.eyebrow{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.cream .eyebrow{color:var(--gold-d)}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.02em;line-height:1.1;text-transform:lowercase;text-wrap:balance}
+h2{font-size:clamp(28px,3.4vw,52px)}
+h3{font-size:clamp(19px,1.7vw,23px);line-height:1.18}
+p,li{min-width:0}
+b,strong{font-weight:800}
+.dark b{color:var(--gold-l)}
+.cream b{color:var(--burg)}
+.prose{display:grid;gap:14px;max-width:44rem}
+.note{font-size:15px;opacity:.82}
+
+/* ===== buttons ===== */
+.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-family:var(--sans);font-weight:800;font-size:15px;line-height:1.2;text-align:center;cursor:pointer;border:0;transition:transform .25s ease,background .25s ease,box-shadow .3s ease,color .3s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn .ar{font-family:var(--display);font-weight:500}
+.btn-gold{background:linear-gradient(120deg,var(--gold-l),var(--gold));color:var(--ink);animation:btnPulse 2.8s ease-in-out infinite}
+.btn-gold::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:38%;background:linear-gradient(100deg,rgba(255,250,230,0),rgba(255,250,230,.75),rgba(255,250,230,0));transform:skewX(-20deg);animation:btnShine 3.8s ease-in-out infinite;pointer-events:none;z-index:1}
+.btn-gold:hover{animation:none;box-shadow:0 14px 34px -8px rgba(221,174,53,.8),0 0 0 4px rgba(243,217,145,.35)}
+@keyframes btnPulse{0%,100%{box-shadow:0 10px 28px -10px rgba(221,174,53,.7),0 0 0 0 rgba(221,174,53,0)}50%{box-shadow:0 12px 34px -8px rgba(221,174,53,.85),0 0 0 7px rgba(221,174,53,.18)}}
+@keyframes btnShine{0%,62%{left:-60%}100%{left:130%}}
+.btn-ghost{border:1.5px solid rgba(247,239,230,.5);color:var(--text-l);background:rgba(26,16,18,.25);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.btn-ghost::before{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left center;transition:transform .35s ease;z-index:-1}
+.btn-ghost:hover{color:var(--ink);border-color:var(--gold)}
+.btn-ghost:hover::before{transform:scaleX(1)}
+.btn-dark{background:var(--ink);color:var(--gold-l)}
+.btn-dark::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:38%;background:linear-gradient(100deg,rgba(243,217,145,0),rgba(243,217,145,.35),rgba(243,217,145,0));transform:skewX(-20deg);animation:btnShine 3.8s ease-in-out infinite;pointer-events:none}
+.btn-dark:hover{box-shadow:0 12px 30px -10px rgba(26,16,18,.7)}
+.btn-line-d{border:1.5px solid var(--text-d);color:var(--text-d);background:transparent}
+.btn-line-d::before{content:"";position:absolute;inset:0;background:var(--text-d);transform:scaleX(0);transform-origin:left center;transition:transform .35s ease;z-index:-1}
+.btn-line-d:hover{color:var(--cream)}
+.btn-line-d:hover::before{transform:scaleX(1)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ===== header ===== */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(12px + env(safe-area-inset-top,0px)) var(--pad) 0;pointer-events:none}
+.hdr-in{pointer-events:auto;max-width:80rem;margin:0 auto;display:flex;align-items:center;gap:14px;background:rgba(26,16,18,.84);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(247,239,230,.1);border-radius:999px;padding:7px 7px 7px 14px;box-shadow:0 14px 40px -20px rgba(0,0,0,.6)}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;flex-shrink:0}
+.brand img{width:44px;height:33px}
+.brand-txt{display:grid;line-height:1.2}
+.brand-txt b{font-family:var(--display);font-weight:600;font-size:12.5px;letter-spacing:-.01em;color:var(--white);white-space:nowrap}
+.brand-txt span{font-size:11.5px;color:var(--text-lm);white-space:nowrap}
+.dnav{display:flex;gap:20px;font-size:14px;font-weight:700;color:var(--text-lm);margin-left:auto;white-space:nowrap}
+.dnav a:hover{color:var(--gold-l)}
+.langs{display:flex;gap:2px;font-size:12px;font-weight:800;margin-left:auto}
+.dnav+.langs{margin-left:6px}
+.langs a{padding:6px 9px;border-radius:999px;color:var(--text-lm)}
+.langs a:hover{color:var(--gold-l)}
+.langs a.on{background:var(--gold);color:var(--ink)}
+.menu-btn{display:none;align-items:center;gap:8px;min-height:42px;padding:0 15px;border-radius:999px;border:1px solid rgba(247,239,230,.22);background:transparent;color:var(--text-l);font-family:var(--sans);font-weight:700;font-size:14px;cursor:pointer}
+.burger{position:relative;width:16px;height:2px;background:currentColor;border-radius:2px}
+.burger::before,.burger::after{content:"";position:absolute;left:0;width:16px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s ease}
+.burger::before{top:-5px}.burger::after{top:5px}
+.menu-btn[aria-expanded="true"] .burger{background:transparent}
+.menu-btn[aria-expanded="true"] .burger::before{transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] .burger::after{transform:translateY(-5px) rotate(-45deg)}
+.hdr .btn{min-height:42px;padding:0 20px;font-size:14px;flex-shrink:0;animation:none;box-shadow:0 6px 18px -8px rgba(221,174,53,.7)}
+.mnav{position:fixed;left:var(--pad);right:var(--pad);top:80px;z-index:60;max-width:26rem;margin-left:auto;display:grid;gap:2px;padding:10px;background:rgba(36,22,26,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line-l);border-radius:24px;box-shadow:0 24px 60px -20px rgba(0,0,0,.7)}
+.mnav[hidden]{display:none}
+.mnav > a{padding:12px 16px;border-radius:16px;font-weight:700;font-size:16px;color:var(--text-l)}
+.mnav > a:hover,.mnav > a:focus-visible{background:rgba(221,174,53,.14);color:var(--gold-l)}
+.mnav .langs{display:none;margin:8px 6px 4px;padding-top:10px;border-top:1px solid var(--line-l)}
+@media (max-width:1320px){.dnav{display:none}.menu-btn{display:inline-flex}.hdr-in>.langs{margin-left:auto}}
+@media (max-width:640px){
+  .brand-txt{display:none}
+  .hdr-in>.langs{display:none}
+  .mnav .langs{display:flex}
+  .menu-btn{margin-left:auto}
+  .mnav .langs a{padding:8px 14px;font-size:13px}
+}
+@media (max-width:380px){.menu-txt{display:none}.menu-btn{padding:0 13px}.hdr .btn{padding:0 15px;font-size:13px}}
+
+/* ===== hero ===== */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--ink)}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:drift 24s ease-in-out infinite alternate}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(105,35,45,.6) 0%,rgba(221,174,53,.14) 30%,rgba(26,16,18,.45) 58%,rgba(26,16,18,.86) 84%,var(--ink) 100%),
+  linear-gradient(90deg,rgba(26,16,18,.62) 0%,rgba(26,16,18,.25) 55%,rgba(26,16,18,0) 100%),
+  radial-gradient(ellipse at 60% 15%,rgba(243,217,145,.3),transparent 60%)}
+@keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.12) translateY(-1.5%)}}
+.hero-in{position:relative;z-index:2;max-width:80rem;width:100%;margin:0 auto;padding:112px var(--pad) 56px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,4vw,64px);align-items:center}
+.hero-text{display:grid;gap:16px;justify-items:start}
+.with{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:999px;background:rgba(26,16,18,.5);border:1px solid rgba(243,217,145,.4);font-size:14px;font-weight:700;color:var(--gold-l);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.with i{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+.hero h1{font-size:clamp(30px,3.5vw,52px);font-weight:800;color:var(--white);line-height:1.06;text-shadow:0 6px 40px rgba(26,16,18,.45)}
+.pro{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.pro b{font-family:var(--display);font-weight:700;font-size:14px;padding:7px 16px;border-radius:999px;background:var(--burg);color:var(--gold-l);letter-spacing:.02em;white-space:nowrap}
+.pro span{font-size:clamp(16px,1.6vw,20px);font-weight:700;color:var(--cream);text-shadow:0 2px 12px rgba(26,16,18,.7)}
+.hero .lead{max-width:38rem;color:#fff;font-size:17.5px;font-weight:600;text-shadow:0 2px 14px rgba(26,16,18,.85),0 0 2px rgba(26,16,18,.6)}
+.facts{display:flex;flex-wrap:wrap;gap:10px}
+.facts div{display:grid;padding:10px 20px;border-radius:22px;border:1px solid var(--line-l);background:rgba(26,16,18,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);line-height:1.3}
+.facts b{font-weight:800;font-size:15px;color:var(--gold-l)}
+.facts span{font-size:13px;color:var(--text-lm)}
+.hero .ctas{margin-top:6px}
+.hero-photo{position:relative;border-radius:var(--r-card);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 90px -30px rgba(0,0,0,.75),0 0 0 1px rgba(243,217,145,.35)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.hero-photo figcaption{position:absolute;left:14px;right:14px;bottom:14px;display:flex}
+.hero-photo figcaption span{padding:7px 14px;border-radius:999px;background:rgba(26,16,18,.72);color:var(--cream);font-size:13px;font-weight:700;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+/* Tibetan title */
+.tib{position:relative;font-family:var(--tib);font-weight:500;font-size:clamp(32px,3vw,44px);line-height:1.25;color:var(--gold);width:fit-content;animation:tibFloat 6s ease-in-out 1.6s infinite alternate}
+.tib span{display:inline-block;animation:tibIn 1.1s cubic-bezier(.2,.7,.2,1) both,tibGlow 4s ease-in-out 1.6s infinite alternate}
+.tib span:nth-child(2){animation-delay:.25s,1.6s}
+.tib span:nth-child(3){animation-delay:.45s,1.6s}
+.tib span:nth-child(4){animation-delay:.7s,1.6s}
+.tib::after{content:attr(data-text);position:absolute;left:0;top:0;white-space:nowrap;background:linear-gradient(110deg,rgba(255,250,225,0) 38%,rgba(255,250,225,.95) 50%,rgba(255,250,225,0) 62%);background-size:260% 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;pointer-events:none;animation:tibShine 5.5s ease-in-out 1.8s infinite}
+@keyframes tibIn{from{opacity:0;transform:translateY(22px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+@keyframes tibGlow{from{text-shadow:0 0 0 rgba(221,174,53,0)}to{text-shadow:0 0 24px rgba(221,174,53,.6)}}
+@keyframes tibShine{0%{background-position:160% 0}55%,100%{background-position:-60% 0}}
+@keyframes tibFloat{from{transform:translateY(0)}to{transform:translateY(-5px)}}
+
+/* ===== sections ===== */
+.mega-wrap{padding:0 clamp(8px,1.4vw,20px)}
+.mega{border-radius:var(--r-mega);margin:0 auto;max-width:1440px;position:relative}
+.cream{background:var(--cream);color:var(--text-d)}
+.burgm{background:linear-gradient(170deg,#3a1219 0%,var(--ink-2) 55%,var(--ink) 100%);color:var(--text-l)}
+.dark{color:var(--text-l)}
+.sec{padding:clamp(60px,8vw,112px) 0;scroll-margin-top:84px;position:relative}
+.mega.sec{margin-top:clamp(10px,1.4vw,20px);margin-bottom:clamp(10px,1.4vw,20px)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px 40px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,48px)}
+.sec-head > div{max-width:46rem;min-width:0}
+.sec-head h2{margin-top:14px}
+.sec-head > p{max-width:24rem;min-width:0;font-size:16px;color:var(--text-dm)}
+.dark .sec-head > p,.burgm .sec-head > p{color:var(--text-lm)}
+.cream p,.cream li{color:var(--text-dm)}
+.cream h3,.cream .big{color:var(--text-d)}
+.dark p,.dark li,.burgm p{color:var(--text-lm)}
+.dark h3,.cream .card-k h3{color:var(--text-l)}
+.callout-box p.callout{color:inherit}
+body{font-weight:500}
+
+/* cards */
+.card{border-radius:var(--r-card);padding:clamp(24px,3vw,42px);min-width:0;position:relative}
+.card-w{background:var(--white);box-shadow:0 30px 60px -40px rgba(105,35,45,.35)}
+.card-k{background:linear-gradient(160deg,var(--ink-3) 0%,var(--ink) 75%);color:var(--text-l);overflow:hidden}
+.card-k::before{content:"";position:absolute;width:320px;height:320px;right:-120px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(221,174,53,.32),transparent 65%);pointer-events:none}
+.card-k > *{position:relative}
+.cream .card-k p,.cream .card-k li{color:var(--text-lm)}
+.cream .card-k b{color:var(--gold-l)}
+.card-d{background:var(--ink-3);border:1px solid var(--line-l)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.bento > *{min-width:0}
+.span-7{grid-column:span 7}.span-5{grid-column:span 5}.span-6{grid-column:span 6}.span-12{grid-column:1/-1}
+.tag{display:inline-flex;align-items:center;padding:8px 16px;border-radius:999px;font-weight:800;font-size:13px;line-height:1.2;letter-spacing:.02em}
+.t-dark{background:var(--ink);color:var(--cream)}
+.t-gold{background:linear-gradient(120deg,#f8e6b4,#f3cfc0);color:var(--burg)}
+.t-line{border:1.5px solid currentColor}
+.t-burg{background:var(--burg);color:var(--gold-l)}
+.callout{font-family:var(--display);font-weight:600;font-size:clamp(19px,2vw,26px);line-height:1.32;letter-spacing:-.015em;max-width:52rem}
+.callout-box{margin-top:clamp(24px,3vw,36px);border-radius:var(--r-card);padding:clamp(24px,3.4vw,44px);position:relative;overflow:hidden}
+.cream .callout-box{background:linear-gradient(120deg,#f8e6b4 0%,#f3cfc0 100%);color:var(--burg)}
+.dark .callout-box,.burgm .callout-box{background:linear-gradient(120deg,rgba(221,174,53,.16),rgba(232,185,168,.08));border:1px solid rgba(221,174,53,.35);color:var(--text-l)}
+.callout-box::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--gold),var(--burg))}
+.big{font-family:var(--display);font-weight:600;font-size:clamp(19px,1.9vw,25px);line-height:1.3;letter-spacing:-.015em}
+.dots{list-style:none;display:flex;flex-direction:column}
+.dots li{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid var(--line-d);font-weight:600}
+.dark .dots li,.card-k .dots li,.burgm .dots li{border-bottom-color:var(--line-l)}
+.dots li:last-child{border-bottom:0}
+.dots li::before{content:"";flex-shrink:0;margin-top:8px;width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--burg))}
+.card-k .dots li::before,.dark .dots li::before{background:linear-gradient(135deg,var(--gold-l),var(--gold))}
+
+/* photo card */
+.photo-card{position:relative;border-radius:var(--r-card);overflow:hidden;min-height:480px;display:flex;align-items:flex-end}
+.photo-card > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,16,18,.9) 0%,rgba(105,35,45,.35) 50%,transparent 80%)}
+.photo-card .cap{position:relative;z-index:2;padding:clamp(24px,4vw,48px);max-width:46rem;color:var(--white)}
+.photo-card .cap p{font-family:var(--display);font-weight:600;font-size:clamp(19px,2.2vw,28px);line-height:1.3;letter-spacing:-.015em;color:var(--white)}
+.photo-card .cap small{display:inline-block;margin-top:18px;font-size:13px;font-weight:700;color:var(--rose-l);padding:6px 14px;border-radius:999px;background:rgba(26,16,18,.5)}
+
+/* reveal */
+.rev .card-w .prose{gap:16px}
+
+/* webinar */
+.web-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,4vw,52px);align-items:center}
+.video{position:relative;aspect-ratio:16/9;border-radius:var(--r-card);overflow:hidden;background:#000;box-shadow:0 40px 80px -40px rgba(221,174,53,.45),0 0 0 1px rgba(243,217,145,.25)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* april */
+.now-flag{position:absolute;top:22px;right:22px}
+.statement{margin-top:clamp(28px,3vw,40px);display:flex;align-items:center;gap:16px 22px;flex-wrap:wrap}
+.statement p{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.4vw,32px);line-height:1.2;letter-spacing:-.02em;color:var(--text-d)}
+
+/* lamrim */
+.lam-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:22px}
+.lam-grid li{list-style:none;border-radius:22px;padding:22px 20px;background:var(--ink-3);border:1px solid var(--line-l);color:var(--text-l);font-weight:600;font-size:15.5px;line-height:1.45;min-width:0}
+.lam-grid li .n{display:block;font-family:var(--display);font-weight:700;font-size:13px;color:var(--gold);margin-bottom:12px}
+.lam-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:16px}
+.lam-quote{display:flex;flex-direction:column;gap:18px}
+.lam-quote .big{color:var(--white)}
+.intro{font-size:18px;max-width:44rem}
+.card-d p{font-size:18px}
+
+/* start / path */
+.path{border-radius:var(--r-card);background:var(--white);padding:clamp(22px,3vw,34px);box-shadow:0 30px 60px -40px rgba(105,35,45,.35)}
+.track{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;position:relative}
+.track i{height:14px;border-radius:999px;background:var(--cream-2);display:block}
+.track i.start{background:var(--burg);opacity:.55}
+.track i.end{background:linear-gradient(90deg,var(--gold),var(--gold-l));box-shadow:0 0 18px rgba(221,174,53,.7);animation:endGlow 2.4s ease-in-out infinite alternate}
+@keyframes endGlow{from{box-shadow:0 0 6px rgba(221,174,53,.4)}to{box-shadow:0 0 22px rgba(221,174,53,.9)}}
+.track-labels{display:flex;justify-content:space-between;gap:16px;margin-top:14px;font-size:14px;line-height:1.4}
+.track-labels span{color:var(--text-dm)}
+.track-labels b{color:var(--text-d)!important;font-family:var(--display);font-weight:600;font-size:14px;text-transform:lowercase}
+.duo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:16px;margin-top:16px}
+.duo > figure{border-radius:var(--r-card);overflow:hidden;min-height:340px;position:relative}
+.duo > figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.duo .card-w{display:flex;flex-direction:column;justify-content:center}
+.duo .big{color:var(--text-d)}
+.steps2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.steps2 h3{margin-top:16px}
+.steps2 .prose{margin-top:14px;gap:12px}
+.dashed{margin-top:16px;border-radius:999px;border:1.5px dashed rgba(105,35,45,.35);padding:16px 28px;font-weight:600}
+.dark .dashed{border-color:rgba(221,174,53,.45)}
+
+/* practice */
+.letters{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.glyph{position:absolute;top:-40px;font-family:var(--tib);font-size:var(--fs);line-height:1;color:var(--gold);opacity:0;animation:gfall var(--dur) cubic-bezier(.35,.1,.6,1) forwards;text-shadow:0 0 12px rgba(221,174,53,.5)}
+.glyph.rose{color:var(--rose)}
+@keyframes gfall{0%{opacity:0;transform:translate(0,0)}12%{opacity:.6}75%{opacity:.45}100%{opacity:0;transform:translate(var(--dx),900px)}}
+#practice .wrap{position:relative;z-index:1}
+.prac-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px;align-items:start}
+.prac-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.prac-list li{list-style:none;border-radius:22px;padding:18px 18px 18px 20px;background:rgba(47,29,34,.82);border:1px solid var(--line-l);color:var(--text-l)!important;font-weight:600;font-size:15.5px;line-height:1.45;display:flex;gap:12px}
+.prac-list li::before{content:"";flex-shrink:0;margin-top:7px;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+.big-grad{font-family:var(--display);font-weight:700;font-size:clamp(24px,3vw,42px);line-height:1.15;letter-spacing:-.02em;text-align:center;margin:clamp(40px,5vw,64px) auto 0;max-width:22em}
+
+/* who */
+.who-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.wc{position:relative;border-radius:var(--r-card);padding:28px 26px 190px;color:var(--text-d);overflow:hidden;min-width:0}
+.wc:nth-child(1){background:linear-gradient(180deg,#f8e8bf 0%,#f0c98c 60%,#d9956f 100%)}
+.wc:nth-child(2){background:linear-gradient(180deg,#f9e3da 0%,#eab3a3 60%,#b9636a 100%);margin-top:36px}
+.wc:nth-child(3){background:linear-gradient(180deg,#f4d6d1 0%,#d79a96 55%,#7d3340 100%)}
+.wc .n{font-family:var(--display);font-size:13px;font-weight:700;opacity:.6}
+.wc h3{margin-top:12px;color:var(--text-d)}
+.wc .prose{position:relative;z-index:2;margin-top:16px;gap:12px}
+.wc p{font-size:15.5px;line-height:1.55;color:#3a2225!important;font-weight:500}
+.wc svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:180px}
+.wc .sun{position:absolute;left:50%;bottom:104px;width:62px;height:62px;margin-left:-31px;border-radius:50%;background:radial-gradient(circle,#fff6d6 0%,var(--gold) 55%,rgba(221,174,53,0) 72%);animation:sunrise 5s ease-in-out infinite alternate}
+.wc:nth-child(2) .sun{left:68%;animation-delay:1s}
+.wc:nth-child(3) .sun{left:30%;bottom:112px;animation-delay:2s}
+@keyframes sunrise{from{transform:translateY(8px)}to{transform:translateY(-6px)}}
+
+/* cycle */
+.cyc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.cyc-grid li{list-style:none;border-radius:22px;padding:22px 22px 24px;background:var(--white);box-shadow:0 24px 50px -40px rgba(105,35,45,.4);font-weight:600;font-size:15.5px;line-height:1.45;color:var(--text-d)!important;min-width:0}
+.cyc-grid li .n{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--gold-l);font-family:var(--display);font-size:13px;font-weight:700;margin-bottom:14px}
+.cyc-grid li:last-child{background:linear-gradient(120deg,#f8e6b4,#f3cfc0)}
+.cyc-grid li:last-child .n{background:var(--burg)}
+
+/* december */
+.shower{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
+.fall{position:absolute;top:-24px;width:var(--sz);height:var(--sz);background:var(--gold);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);opacity:0;animation:fall var(--dur) cubic-bezier(.35,.1,.6,1) forwards;filter:drop-shadow(0 0 4px rgba(243,217,145,.9))}
+.fall.l{background:var(--gold-l)}
+@keyframes fall{0%{opacity:0;transform:translate(0,0) rotate(0)}12%{opacity:1}80%{opacity:.9}100%{opacity:0;transform:translate(var(--dx),900px) rotate(200deg)}}
+.dec-wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(20px,4vw,52px);align-items:center}
+.magic{transition:box-shadow .8s ease}
+.is-on .magic{box-shadow:0 0 0 1px rgba(221,174,53,.55),0 20px 60px -10px rgba(221,174,53,.3)}
+.magic .prose{gap:14px}
+.magic .big{color:var(--white)}
+.stars{position:absolute;inset:0;pointer-events:none}
+.tw{position:absolute;width:var(--s);height:var(--s);background:var(--gold);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);opacity:.15;animation:twinkle 3.2s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes twinkle{0%,100%{opacity:.12;transform:scale(.6) rotate(0)}50%{opacity:.9;transform:scale(1.15) rotate(45deg)}}
+.dec-art{display:grid;grid-template-columns:42% 58%;align-items:end;max-width:24rem;margin:0 auto;width:100%}
+.wand-svg,.tree-svg{width:100%;height:auto;display:block;overflow:visible}
+.wand-svg{margin-bottom:6px}
+.wand{transform-box:view-box;transform-origin:40px 196px;animation:wave 2.6s ease-in-out infinite alternate}
+@keyframes wave{from{transform:rotate(-9deg)}to{transform:rotate(7deg)}}
+.glow{animation:glow 2.6s ease-in-out infinite alternate}
+.is-on .glow{animation-duration:1.3s}
+@keyframes glow{from{opacity:.35}to{opacity:1}}
+.wand-star{transform-box:fill-box;transform-origin:center;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(72deg)}}
+.sp{fill:var(--gold-l);opacity:0;transform-box:fill-box;transform-origin:center;animation:spark 2.4s ease-in-out infinite}
+.sp1{animation-delay:.4s}.sp2{animation-delay:.9s}.sp3{animation-delay:1.3s}.sp4{animation-delay:1.7s}.sp5{animation-delay:2s}
+@keyframes spark{0%,100%{opacity:0}40%{opacity:1}70%{opacity:.2}}
+.dot{fill:#f2cf6b;opacity:0;animation:fly 2.2s ease-out infinite}
+.d1{animation-delay:.45s;animation-name:fly2}.d2{animation-delay:.9s}.d3{animation-delay:1.35s;animation-name:fly3}.d4{animation-delay:1.8s}
+@keyframes fly{0%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(46px,-38px)}}
+@keyframes fly2{0%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(58px,6px)}}
+@keyframes fly3{0%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(14px,-56px)}}
+.tree{transform-box:view-box;transform-origin:80px 208px;animation:treeSway 5s ease-in-out infinite alternate}
+@keyframes treeSway{from{transform:rotate(-1.6deg)}to{transform:rotate(1.6deg)}}
+.bulb{animation:blink 1.8s ease-in-out infinite}
+.b1{animation-delay:.35s}.b2{animation-delay:.7s}.b3{animation-delay:1.05s}.b4{animation-delay:1.4s}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1;filter:drop-shadow(0 0 4px #ffd76a)}}
+.orn{transform-box:fill-box;transform-origin:50% 0;animation:ornSwing 3s ease-in-out infinite alternate}
+.o1{animation-delay:.8s}.o2{animation-delay:1.6s}
+@keyframes ornSwing{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+.tree-star{transform-box:fill-box;transform-origin:center;animation:treeStar 2.4s ease-in-out infinite}
+@keyframes treeStar{0%,100%{transform:scale(1);filter:drop-shadow(0 0 2px rgba(221,174,53,.5))}50%{transform:scale(1.15);filter:drop-shadow(0 0 10px rgba(255,215,106,.95))}}
+.dec-glow{position:absolute;width:420px;height:420px;border-radius:50%;right:6%;top:18%;background:radial-gradient(circle,rgba(221,174,53,.18),transparent 65%);pointer-events:none}
+
+/* together */
+.comm-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.c-main{border-radius:var(--r-card);overflow:hidden;position:relative;min-height:440px}
+.c-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 7s ease-out}
+.is-on .c-main img{transform:scale(1.06)}
+.c-main figcaption{position:absolute;left:18px;bottom:18px;right:18px;z-index:2;display:flex}
+.c-main figcaption span{padding:8px 16px;border-radius:999px;background:rgba(26,16,18,.78);color:var(--cream);font-size:13px;font-weight:700;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.bokeh{position:absolute;inset:0;pointer-events:none;z-index:1}
+.bokeh span{position:absolute;bottom:-40px;width:var(--sz);height:var(--sz);border-radius:50%;background:radial-gradient(circle,rgba(255,240,190,1) 0,rgba(255,210,110,.75) 30%,rgba(255,200,90,0) 70%);mix-blend-mode:screen;box-shadow:0 0 18px rgba(255,210,110,.6);opacity:0;animation:rise var(--dur) ease-out forwards}
+@keyframes rise{0%{opacity:0;transform:translate(0,0) scale(.6)}15%{opacity:.95}100%{opacity:0;transform:translate(var(--dx),-480px) scale(1.1)}}
+.c-txt .big{color:var(--text-d)}
+.c-txt .prose{margin-top:16px}
+.c-txt .dots{margin-top:10px}
+.online{margin-top:16px;display:flex;align-items:center;gap:16px 24px;background:var(--ink);border-radius:999px;padding:20px 34px}
+.online p{color:var(--text-l)!important;font-weight:600;max-width:60rem}
+.online i{flex-shrink:0;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+
+/* format / schedule */
+.fmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.fmt-grid li{list-style:none;display:flex;align-items:center;gap:14px;border-radius:999px;padding:14px 22px 14px 14px;background:var(--ink-3);border:1px solid var(--line-l);color:var(--text-l)!important;font-weight:700;font-size:15px;line-height:1.35;min-width:0}
+.fmt-grid li .n{flex-shrink:0;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--ink);font-family:var(--display);font-size:12px;font-weight:700}
+.fmt-grid li.hl{background:linear-gradient(120deg,var(--burg-2),var(--burg))}
+.sep-line{height:1px;background:var(--line-l);margin:0 auto;max-width:76rem}
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.day{border-radius:var(--r-card);padding:28px 26px;background:var(--ink-3);border:1px solid var(--line-l);display:grid;gap:6px;align-content:start;min-width:0;position:relative;overflow:hidden}
+.day:nth-child(2){background:linear-gradient(165deg,var(--burg-2) 0%,var(--burg) 55%,#3a1219 100%);border:0}
+.day .top{display:flex;align-items:baseline;gap:12px}
+.day .dnum{font-family:var(--display);font-weight:800;font-size:clamp(46px,5vw,64px);line-height:1;letter-spacing:-.04em}
+.day .dname{font-family:var(--display);font-weight:700;font-size:15px;color:var(--gold-l);text-transform:lowercase}
+.day .ddate{font-size:14px;font-weight:700;color:var(--text-lm)}
+.day .dtime{justify-self:start;margin-top:14px;padding:7px 14px;border-radius:999px;background:var(--gold);color:var(--ink);font-weight:800;font-size:14px}
+.day .dwhat{margin-top:8px;font-size:15.5px;color:var(--text-l)!important;font-weight:600}
+.sched-hint{margin-top:16px;display:flex;align-items:center;gap:14px;border-radius:999px;border:1.5px dashed rgba(221,174,53,.5);padding:16px 28px;color:var(--text-l)!important;font-weight:600}
+
+/* teachers */
+.t-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:center}
+.t-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.t-photos figure{border-radius:var(--r-card);overflow:hidden;aspect-ratio:3/4}
+.t-photos img{width:100%;height:100%;object-fit:cover}
+.t-photos figure:nth-child(2){margin-top:40px}
+.t-bios{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.t-bios .card-k h3,.t-bios .card-w h3{font-size:clamp(20px,2vw,26px)}
+.t-bios p{margin-top:14px}
+.t-bios .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+
+/* tickets */
+.tar{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch;padding-top:22px}
+.tc{position:relative;border-radius:var(--r-card);padding:34px 28px 28px;display:flex;flex-direction:column;min-width:0;background:var(--ink-3);border:1px solid var(--line-l)}
+.tc.rec{background:linear-gradient(165deg,#f8e7b8 0%,var(--gold) 58%,#c98d4f 100%);color:var(--text-d);border:0;box-shadow:0 40px 80px -40px rgba(221,174,53,.6)}
+.tc.vip{background:linear-gradient(165deg,var(--burg-2) 0%,var(--burg) 50%,#3a1219 100%);border:0;box-shadow:0 0 0 1px rgba(221,174,53,.55),0 30px 70px -30px rgba(221,174,53,.35)}
+.tc .flag{align-self:flex-start;padding:6px 13px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em;background:var(--ink);color:var(--gold-l);margin-bottom:18px}
+.tc h3{font-size:22px;text-transform:none;font-weight:600;color:inherit}
+.tc.vip h3{color:var(--gold-l)}
+.tc .price{margin-top:18px;font-family:var(--display);font-weight:800;font-size:clamp(46px,4.6vw,64px);line-height:1;letter-spacing:-.04em}
+.tc.vip .price{color:var(--gold-l)}
+.tc.free .price{font-size:clamp(32px,3vw,42px);line-height:1.2}
+.tc .price small{font-size:.42em;letter-spacing:0;font-weight:600;opacity:.75}
+.tc ul{list-style:none;margin:24px 0 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tc li{display:flex;gap:12px;font-size:15px;line-height:1.45;color:var(--text-lm)}
+.tc li::before{content:"";flex-shrink:0;margin-top:7px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.tc.rec li{color:#3a2225}
+.tc.rec li::before{background:var(--burg)}
+.tc.vip li{color:#f0dcd6}
+.tc .seats{font-size:13.5px;line-height:1.45;margin-bottom:14px;color:var(--text-lm)}
+.tc.rec .seats{color:#4a2c2f;font-weight:600}
+.tc.vip .seats{color:var(--gold-l);font-weight:700}
+.tc .btn{width:100%;padding:0 16px}
+.tc.vip .btn{background:linear-gradient(120deg,var(--gold-l),var(--gold));color:var(--ink);border:0}
+.crown{position:absolute;top:-30px;right:20px;width:64px;height:54px;filter:drop-shadow(0 6px 12px rgba(221,174,53,.5));animation:crownFloat 3.2s ease-in-out infinite}
+.crown svg{display:block;width:64px;height:54px;overflow:visible}
+@keyframes crownFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-6px) rotate(3deg)}}
+.crown-shine{animation:crownShine 3.4s ease-in-out infinite}
+@keyframes crownShine{0%,55%{transform:translateX(0)}100%{transform:translateX(100px)}}
+.cs{position:absolute;width:10px;height:10px;background:#f4d779;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);opacity:0;animation:csTw 2.6s ease-in-out infinite}
+.cs1{top:-6px;left:-10px}.cs2{top:6px;right:-12px;width:8px;height:8px;animation-delay:.7s}.cs3{bottom:-4px;left:-14px;width:7px;height:7px;animation-delay:1.3s}.cs4{top:-14px;right:10px;width:9px;height:9px;animation-delay:1.9s}
+@keyframes csTw{0%,100%{opacity:0;transform:scale(.4) rotate(0)}50%{opacity:1;transform:scale(1.1) rotate(45deg)}}
+.growth{margin-top:20px;border-radius:var(--r-card);border:1.5px dashed rgba(221,174,53,.45);padding:22px 26px}
+.growth h3{font-size:clamp(16px,1.5vw,19px);color:var(--text-l)}
+.ladder{list-style:none;margin-top:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:relative}
+.ladder li{position:relative;border-radius:20px;padding:14px 16px;background:rgba(247,239,230,.06);display:grid;gap:2px;min-width:0}
+.ladder li b{font-family:var(--display);font-weight:700;font-size:clamp(20px,2vw,26px);color:var(--gold-l)!important;line-height:1.1}
+.ladder li span{font-size:13.5px;color:var(--text-lm)}
+.ladder li:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);font-family:var(--display);color:var(--gold);font-size:14px;z-index:1}
+
+/* place */
+.place-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.place-grid figure{border-radius:var(--r-card);overflow:hidden;min-height:340px;position:relative}
+.place-grid figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.place-card{display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.place-card .addr{font-family:var(--display);font-weight:600;font-size:clamp(18px,1.8vw,23px);line-height:1.35;color:var(--white)!important}
+.place-card .pin{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--ink);margin-bottom:18px}
+
+/* faq */
+.faq-wrap{max-width:56rem}
+.faq{display:grid;gap:10px}
+.faq details{border-radius:24px;background:var(--ink-3);border:1px solid var(--line-l);transition:background .3s ease,border-color .3s ease}
+.faq details[open]{background:linear-gradient(160deg,#3a1f25,var(--ink-3));border-color:rgba(221,174,53,.4)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 64px 20px 26px;position:relative;font-weight:800;font-size:17px;line-height:1.4;color:var(--text-l)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(247,239,230,.08);color:var(--gold);font-family:var(--display);font-size:18px;font-weight:500;transition:transform .3s ease,background .3s ease}
+.faq details[open] summary::after{content:"−";background:var(--gold);color:var(--ink)}
+.faq .ans{padding:0 26px 22px;display:grid;gap:12px;max-width:46rem}
+
+/* photos */
+.gallery{column-count:4;column-gap:12px}
+.gallery img{width:100%;height:auto;margin-bottom:12px;break-inside:avoid;border-radius:18px;background:var(--cream-2)}
+.gallery img[hidden]{display:none}
+.more-row{margin-top:16px;display:flex;justify-content:center}
+
+/* final */
+.final{position:relative;overflow:hidden;text-align:center}
+.final::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(221,174,53,.22),transparent 60%),radial-gradient(ellipse at 50% 100%,rgba(105,35,45,.5),transparent 60%);pointer-events:none}
+.final .wrap{position:relative;max-width:52rem}
+.final h2{font-size:clamp(28px,3.6vw,52px)}
+.final-steps{list-style:none;display:grid;gap:10px;margin:32px auto 0;text-align:left;max-width:40rem}
+.final-steps li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;border-radius:22px;padding:16px 20px;background:rgba(47,29,34,.8);border:1px solid var(--line-l);color:var(--text-l)!important;font-weight:600}
+.final-steps li .tag{min-width:96px;justify-content:center}
+.final .when{margin-top:30px;display:inline-flex;padding:12px 24px;border-radius:999px;background:var(--gold);color:var(--ink)!important;font-weight:800;font-size:16px}
+.final .cta-p{margin-top:18px;color:var(--text-l)!important;font-size:18px}
+.final .ctas{justify-content:center;margin-top:28px}
+
+/* footer */
+.ftr{padding:48px var(--pad) calc(44px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--text-lm);font-size:14px;display:grid;gap:8px;justify-items:center;border-top:1px solid var(--line-l)}
+.ftr img{width:112px;height:112px;margin-bottom:8px;padding:8px;border-radius:28px;background:var(--cream)}
+.ftr a{color:var(--gold-l);text-decoration:underline;text-underline-offset:3px}
+
+/* ===== responsive ===== */
+@media (max-width:1100px){
+  .lam-grid{grid-template-columns:repeat(3,1fr)}
+  .fmt-grid{grid-template-columns:1fr 1fr}
+  .gallery{column-count:3}
+}
+@media (max-width:960px){
+  .hero-in{grid-template-columns:1fr;padding-top:104px}
+  .hero-photo{order:-1;aspect-ratio:1/1;max-width:560px;width:100%}
+  .hero-photo img{object-position:50% 34%}
+  .span-7,.span-5,.span-6{grid-column:1/-1}
+  .web-grid,.dec-wrap,.comm-grid,.t-grid,.place-grid,.prac-grid{grid-template-columns:1fr}
+  .who-cards{grid-template-columns:1fr}
+  .wc:nth-child(2){margin-top:0}
+  .tar{grid-template-columns:1fr;row-gap:40px}
+  .days{grid-template-columns:1fr}
+  .duo{grid-template-columns:1fr}
+  .duo > figure{min-height:0;aspect-ratio:4/5;max-height:520px}
+  .lam-two{grid-template-columns:1fr}
+  .steps2,.t-bios{grid-template-columns:1fr}
+  .cyc-grid{grid-template-columns:1fr 1fr}
+  .dec-art{max-width:18rem}
+  .ladder{grid-template-columns:1fr 1fr;row-gap:22px}
+  .ladder li:nth-child(2)::after{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  :root{--r-mega:28px;--r-card:24px}
+  .hero-in{padding-top:92px;padding-bottom:48px;gap:24px}
+  .hero-photo{aspect-ratio:5/4}
+  .hero-photo img{object-position:50% 36%}
+  .hero .ctas .btn{width:100%}
+  .hero .ctas{width:100%}
+  .lam-grid,.cyc-grid,.fmt-grid,.prac-list{grid-template-columns:1fr}
+  .fmt-grid li{border-radius:22px}
+  .lam-grid li .n{margin-bottom:6px}
+  .photo-card{min-height:440px}
+  .online,.dashed,.sched-hint{border-radius:22px;padding:18px 20px}
+  .online{align-items:flex-start}
+  .online i{margin-top:6px}
+  .wc{padding:24px 22px 170px}
+  .wc svg{height:160px}
+  .wc .sun{bottom:92px}
+  .t-photos figure:nth-child(2){margin-top:24px}
+  .gallery{column-count:2;column-gap:8px}
+  .gallery img{margin-bottom:8px;border-radius:14px}
+  .faq summary{padding:18px 58px 18px 20px;font-size:16px}
+  .faq summary::after{right:12px}
+  .faq .ans{padding:0 20px 20px}
+  .track-labels{font-size:13px}
+  .final-steps li{grid-template-columns:1fr;gap:8px}
+  .final-steps li .tag{justify-self:start}
+  .ctas .btn{width:100%}
+  .more-row .btn{width:100%}
+  .ladder li:not(:last-child)::after{display:none}
+  .sec-head{margin-bottom:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .tw{opacity:.5}.sp{opacity:.8}.bulb{opacity:1}.cs{opacity:.8}
+  .btn-gold::after,.btn-dark::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="#top"><img src="img/logo-mark.png" width="160" height="120" alt="Академия Классической Мудрости"><span class="brand-txt"><b>Практики системы семян</b><span>19–21 декабря · Вена + онлайн</span></span></a>
+    <nav class="dnav" aria-label="Разделы">
+      <a href="#reveal">Тема</a>
+      <a href="#lamrim">Почему Ламрим</a>
+      <a href="#start">Медитация Pro</a>
+      <a href="#who">Для кого</a>
+      <a href="#teachers">Учителя</a>
+      <a href="#tickets">Участие</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="langs" aria-label="Язык страницы">
+      <a class="on" href="https://lp.classicwisdomacademy.com/lamrim-december" hreflang="ru" aria-current="page">RU</a>
+      <a href="https://lp.classicwisdomacademy.com/lamrim-december-ua" hreflang="uk">UA</a>
+      <a href="https://lp.classicwisdomacademy.com/lamrim-december-en" hreflang="en">EN</a>
+      <a href="https://lp.classicwisdomacademy.com/lamrim-december-de" hreflang="de">DE</a>
+    </div>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="mnav"><span class="burger" aria-hidden="true"></span><span class="menu-txt">Меню</span></button>
+    <a class="btn btn-gold" href="#tickets">Забронировать</a>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Меню" hidden>
+  <a href="#reveal">Тема</a>
+  <a href="#lamrim">Почему Ламрим</a>
+  <a href="#start">Медитация Pro</a>
+  <a href="#who">Для кого</a>
+  <a href="#teachers">Учителя</a>
+  <a href="#tickets">Участие</a>
+  <a href="#faq">Вопросы</a>
+  <div class="langs" aria-label="Язык страницы">
+    <a class="on" href="https://lp.classicwisdomacademy.com/lamrim-december" hreflang="ru" aria-current="page">RU</a>
+    <a href="https://lp.classicwisdomacademy.com/lamrim-december-ua" hreflang="uk">UA</a>
+    <a href="https://lp.classicwisdomacademy.com/lamrim-december-en" hreflang="en">EN</a>
+    <a href="https://lp.classicwisdomacademy.com/lamrim-december-de" hreflang="de">DE</a>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-bg"><img src="img/rainbow-hd.jpg" width="1400" height="1050" alt="" fetchpriority="high"></div>
+    <div class="hero-in">
+      <div class="hero-text">
+        <div class="tib" lang="bo" aria-hidden="true" data-text="ལམ་རིམ།"><span>ལམ</span><span>་</span><span>རིམ</span><span>།</span></div>
+        <span class="with"><i></i>С Питером и Марией Мёртл</span>
+        <h1>Практики системы семян для ежедневной жизни</h1>
+        <p class="pro"><b>Медитация Pro</b><span>Шаматха, мудрость и путь к прямому восприятию пустоты</span></p>
+        <p class="lead">Начало нового систематического цикла учений по Ламриму, который Питер и Мария Мёртл будут передавать с благословения Геше Майкла Роуча.</p>
+        <div class="facts">
+          <div><b>19–21 декабря</b><span>три дня учений</span></div>
+          <div><b>Вена + онлайн</b><span>Austria Trend Hotel Savoyen</span></div>
+        </div>
+        <div class="ctas">
+          <a class="btn btn-gold" href="#tickets">Забронировать место в Вене <span class="ar" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://t.me/+8ZHHve0PD4VjOTIy" target="_blank" rel="noopener">Участвовать онлайн бесплатно</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="img/arizona-pair-hd.jpg" width="960" height="1280" alt="Питер и Мария Мёртл на фоне красных скал Аризоны">
+        <figcaption><span>Питер и Мария Мёртл</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ТЕМА -->
+  <div class="mega-wrap">
+    <section class="mega cream sec rev" id="reveal">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Тема декабря</p><h2>Теперь мы готовы раскрыть тему декабря</h2></div>
+        </div>
+        <div class="bento">
+          <div class="card card-w span-7">
+            <div class="prose">
+              <p>Когда мы впервые объявили мероприятие <b>«Практики системы семян для ежедневной жизни»</b>, его точная тема ещё не была определена.</p>
+              <p>Питер и Мария Мёртл хотели сначала лично поговорить со своим учителем — Геше Майклом Роучем — и получить его наставление: <b>что именно им следует преподавать своим ученикам дальше?</b></p>
+              <p>Долгое время такой возможности не было. Но во время недавней поездки в США состоялась особенная личная встреча.</p>
+            </div>
+          </div>
+          <div class="card card-k span-5">
+            <div class="prose">
+              <p>Питер и Мария Мёртл провели около двух часов наедине с Геше Майклом, рассказали о завершении важного этапа своего служения и спросили, каким должен стать следующий шаг.</p>
+              <p>И получили ясный ответ и благословение: <b>продолжать обучение учеников и начать передачу большого цикла Ламрима.</b></p>
+              <p>Именно поэтому теперь мы готовы раскрыть содержание декабрьской встречи.</p>
+            </div>
+          </div>
+          <figure class="photo-card span-12">
+            <img src="img/rainbow.jpg" width="1000" height="750" alt="Двойная радуга над красными скалами Аризоны" loading="lazy" style="object-position:50% 45%">
+            <figcaption class="cap">
+              <p>В декабре начинается новый систематический цикл учений по Ламриму — последовательным шагам на пути к самой высокой цели.</p>
+              <small>Аризона, из поездки Питера и Марии Мёртл</small>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ВЕБИНАР -->
+  <section class="sec dark" id="webinar">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Запись вебинара</p><h2>Узнайте историю нового цикла <span class="grad">из первых уст</span></h2></div>
+      </div>
+      <div class="web-grid">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/sHGnF8q0sWc" title="Вебинар: трансформационная поездка Питера и Марии Мёртл в США" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div>
+          <div class="prose">
+            <p>Посмотрите запись встречи, в которой Питер Мёртл делится впечатлениями от трансформационной поездки в США и рассказывает о личном двухчасовом разговоре с Геше Майклом Роучем.</p>
+            <p>Вы узнаете, какое наставление получили Питер и Мария Мёртл, почему после прямой передачи Алмазного пути особенно важно продолжать обучение и как родилась идея начать новый систематический цикл Ламрима.</p>
+          </div>
+          <div class="ctas" style="margin-top:26px"><a class="btn btn-gold" href="https://youtu.be/sHGnF8q0sWc" target="_blank" rel="noopener">Смотреть запись вебинара <span class="ar" aria-hidden="true">→</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- АПРЕЛЬ -->
+  <div class="mega-wrap">
+    <section class="mega cream sec" id="april">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Апрель и декабрь</p><h2>«Но ведь Ламрим уже был в апреле?»</h2></div>
+        </div>
+        <div class="bento">
+          <div class="card card-w span-5">
+            <span class="tag t-line" style="color:var(--burg)">Апрель</span>
+            <p style="margin-top:20px">Да, в апреле Питер и Мария Мёртл преподавали <b>конкретную медитацию, которая называется «Ламрим»</b>, — медитацию по этапам пути. Теперь речь идёт о другом масштабе.</p>
+          </div>
+          <div class="card card-k span-7">
+            <span class="tag t-gold">Сейчас</span>
+            <div class="prose" style="margin-top:20px">
+              <p>Начинается большой систематический цикл <b>учений по Ламриму как целостной карте пути</b>.</p>
+              <p>В нём отдельные знания и практики будут постепенно складываться в единую систему: что практиковать, в каком порядке двигаться и как соединить изменения в повседневной жизни с самой высокой духовной целью.</p>
+            </div>
+          </div>
+        </div>
+        <div class="statement"><p>Это не будет повторением учений в апреле.</p></div>
+        <div class="callout-box"><p class="callout">Если вы были в апреле — теперь мы идём дальше.<br>Если вас не было — вы сможете присоединиться с самого начала нового цикла.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ЧТО ТАКОЕ ЛАМРИМ -->
+  <section class="sec dark" id="lamrim">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Что такое Ламрим</p><h2>Целостная карта пути <span class="grad">к просветлению</span></h2></div>
+      </div>
+      <p class="intro">«Ламрим» переводится как <b>«этапы пути»</b>. Это последовательная система, которая показывает:</p>
+      <ul class="lam-grid">
+        <li><span class="n">01</span>с чего начинается внутренняя трансформация;</li>
+        <li><span class="n">02</span>какие практики необходимы на каждом этапе;</li>
+        <li><span class="n">03</span>почему важно проходить эти шаги в определённом порядке;</li>
+        <li><span class="n">04</span>как работать со своим умом в ежедневной жизни;</li>
+        <li><span class="n">05</span>как соединить повседневные цели с движением к самой высокой цели.</li>
+      </ul>
+      <div class="lam-two">
+        <div class="card card-d">
+          <p>Мы можем знать много отдельных практик, слушать разные учения и понимать сложные идеи. Но без ясной карты бывает трудно увидеть, <b>где мы находимся сейчас и какой шаг должен стать следующим</b>.</p>
+        </div>
+        <div class="card card-k lam-quote">
+          <p class="big">Ламрим помогает собрать знания в <span class="grad">единый путь</span>.</p>
+          <p>Он может поддержать человека в изменении отдельных сфер — отношений, здоровья, реализации и благополучия. Но его подлинная глубина значительно больше: это путь постепенного преобразования всего человека.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- МЕДИТАЦИЯ PRO -->
+  <div class="mega-wrap">
+    <section class="mega cream sec" id="start">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Почему цикл начинается с медитации</p><h2>Медитация <span class="nc">Pro</span>: шаматха и мудрость</h2></div>
+        </div>
+        <div class="path" role="img" aria-label="Схема: путь Ламрима от первых шагов к шаматхе и мудрости. Цикл начинается с последнего раздела, затем возвращается к началу.">
+          <div class="track"><i class="start"></i><i></i><i></i><i></i><i></i><i class="end"></i></div>
+          <div class="track-labels"><span><b>Первые этапы пути</b><br>сюда вернёмся следом</span><span style="text-align:right"><b>Шаматха и мудрость</b><br>с этого начинаем в декабре</span></div>
+        </div>
+        <div class="duo">
+          <figure><img src="img/meditation.jpg" width="562" height="1000" alt="Учитель сидит в медитации на коврике, на полу — солнечный блик-радуга" loading="lazy"></figure>
+          <div class="card card-w">
+            <div class="prose">
+              <p>Обычно Ламрим начинают изучать с первых этапов пути. Но Геше Майкл выстроил свой цикл необычным образом: сначала он преподавал шаматху, медитацию и мудрость, а затем вернулся к остальным ступеням.</p>
+              <p class="big">Питер и Мария Мёртл пойдут тем же путём.</p>
+            </div>
+          </div>
+        </div>
+        <div class="steps2">
+          <div class="card card-w">
+            <span class="tag t-dark">Шаматха</span>
+            <h3>Глубокая устойчивость ума</h3>
+            <p style="margin-top:14px">Вы начнёте изучать, как развивать ясное и устойчивое сосредоточение:</p>
+            <ul class="dots" style="margin-top:8px">
+              <li>как работают девять уровней концентрации;</li>
+              <li>что мешает нам сохранять внимание;</li>
+              <li>какие противоядия применять к препятствиям;</li>
+              <li>как постепенно сделать медитацию глубокой и стабильной.</li>
+            </ul>
+          </div>
+          <div class="card card-k">
+            <span class="tag t-gold">Мудрость</span>
+            <h3>Подготовка к прямому восприятию пустоты</h3>
+            <div class="prose">
+              <p>Шаматха — не просто умение долго сидеть с закрытыми глазами или успокаивать мысли.</p>
+              <p>Глубокое однонаправленное сосредоточение необходимо, чтобы подготовить ум к прямому восприятию пустоты — опыту, который способен полностью изменить наше понимание себя и мира.</p>
+            </div>
+          </div>
+        </div>
+        <p class="dashed">За три дня невозможно пройти весь этот путь. Но в декабре вы получите карту, знания и практические инструменты для его начала.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ПРАКТИКА -->
+  <section class="sec dark" id="practice">
+    <div class="letters" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Практика</p><h2>Знания меняют жизнь, когда становятся <span class="grad">практикой</span></h2></div>
+      </div>
+      <div class="prac-grid">
+        <div class="prose">
+          <p style="font-size:18px">Можно услышать множество прекрасных учений и даже хорошо их понимать. Но настоящее изменение начинается тогда, когда знания входят в нашу ежедневную жизнь. Именно регулярная практика помогает:</p>
+        </div>
+        <ul class="prac-list">
+          <li>замечать привычные реакции своего ума;</li>
+          <li>постепенно менять причины, создающие нашу реальность;</li>
+          <li>развивать устойчивость и ясность;</li>
+          <li>переносить знания из конспектов в реальные отношения, решения и поступки;</li>
+          <li>не терять направление, когда появляются сложности;</li>
+          <li>шаг за шагом становиться тем человеком, которым мы хотим быть.</li>
+        </ul>
+      </div>
+      <p class="intro" style="margin-top:28px">Поэтому новый цикл задуман не только как серия лекций. Учителя хотят соединить знания с медитацией, обсуждением, самостоятельной практикой и в дальнейшем — с ретритами.</p>
+      <p class="big-grad grad">Не просто знать путь, а действительно идти по нему.</p>
+    </div>
+  </section>
+
+  <!-- ДЛЯ КОГО -->
+  <div class="mega-wrap">
+    <section class="mega burgm sec" id="who">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Кому подойдут эти учения</p><h2>Ламрим нужен на <span class="grad">любом этапе</span> пути</h2></div>
+        </div>
+        <div class="who-cards">
+          <article class="wc">
+            <div class="n">01</div>
+            <h3>Если вы только начинаете</h3>
+            <div class="prose">
+              <p>Ламрим может стать прекрасным входом в тибетскую мудрость.</p>
+              <p>Вам не нужно заранее знать специальные термины или проходить курсы ACI. Вы получите понятную карту: как работать с собой, какие шаги предпринимать и как постепенно менять свою жизнь.</p>
+              <p>Многие ученики Геше Майкла впервые открыли для себя Дхарму именно через Ламрим.</p>
+            </div>
+            <div class="sun" aria-hidden="true"></div>
+            <svg viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120 L60 70 L95 98 L150 40 L205 95 L240 72 L300 110 L300 200 L0 200Z" fill="#b9636a" opacity=".55"/><path d="M0 160 L50 120 L100 150 L165 92 L230 148 L270 125 L300 140 L300 200 L0 200Z" fill="#69232d" opacity=".9"/></svg>
+          </article>
+          <article class="wc">
+            <div class="n">02</div>
+            <h3>Если вы изучаете или уже завершили курсы <span class="nc">ACI</span></h3>
+            <div class="prose">
+              <p>Курсы ACI глубоко раскрывают отдельные темы тибетской философии. Ламрим помогает увидеть, как эти знания соединяются между собой и в какой последовательности применять их на пути.</p>
+              <p>Некоторые темы будут знакомы, но многое раскроется подробнее и с другого ракурса.</p>
+            </div>
+            <div class="sun" aria-hidden="true"></div>
+            <svg viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 105 L45 80 L110 30 L160 85 L200 60 L300 115 L300 200 L0 200Z" fill="#8a3340" opacity=".5"/><path d="M0 155 L70 105 L120 140 L185 95 L250 150 L300 128 L300 200 L0 200Z" fill="#4a1720" opacity=".92"/></svg>
+          </article>
+          <article class="wc">
+            <div class="n">03</div>
+            <h3>Если вы получили прямую передачу Алмазного пути</h3>
+            <div class="prose">
+              <p>Получение передачи — не завершение обучения, а открытие двери.</p>
+              <p>По словам Питера Мёртла, практиковать Алмазный путь без прочной основы Ламрима чрезвычайно сложно. Именно Ламрим помогает укоренить знания в уме, сохранить правильное направление и сделать глубокие практики живым опытом, а не только красивыми словами.</p>
+              <p>Сам Питер Мёртл изучал Ламрим у Геше Майкла параллельно со своей практикой Алмазного пути.</p>
+            </div>
+            <div class="sun" aria-hidden="true"></div>
+            <svg viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 110 L80 50 L130 95 L190 45 L250 90 L300 70 L300 200 L0 200Z" fill="#69232d" opacity=".55"/><path d="M0 150 L60 118 L130 160 L200 100 L260 140 L300 125 L300 200 L0 200Z" fill="#1a1012" opacity=".9"/></svg>
+          </article>
+        </div>
+        <div class="callout-box"><p class="callout">Ламрим и Алмазный путь не противоречат друг другу — они <span class="grad">поддерживают и питают</span> друг друга.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ПЕРВЫЙ ЭТАП -->
+  <div class="mega-wrap">
+    <section class="mega cream sec" id="cycle">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Первый этап</p><h2>Большое начало, а не обязательство на десять лет</h2></div>
+        </div>
+        <div class="bento">
+          <div class="card card-w span-7">
+            <div class="prose">
+              <p>Геше Майкл передавал этот цикл Ламрима на протяжении многих лет. Питер и Мария Мёртл хотят сохранить эти знания, систематизировать их и постепенно оформить в последовательные курсы.</p>
+              <p>Но вам не нужно сейчас принимать решение на годы вперёд.</p>
+            </div>
+          </div>
+          <div class="card card-k span-5" style="display:flex;align-items:center">
+            <p class="big" style="color:var(--white)"><span class="grad">19–21 декабря</span> — самостоятельный первый этап, после которого вы:</p>
+          </div>
+        </div>
+        <ul class="cyc-grid">
+          <li><span class="n">1</span>поймёте роль шаматхи на духовном пути;</li>
+          <li><span class="n">2</span>получите знания о развитии концентрации;</li>
+          <li><span class="n">3</span>познакомитесь с препятствиями в медитации и способами работы с ними;</li>
+          <li><span class="n">4</span>увидите связь между медитацией, мудростью и пустотой;</li>
+          <li><span class="n">5</span>получите практики, которые сможете включить в ежедневную жизнь;</li>
+          <li><span class="n">6</span>сами решите, хотите ли продолжать дальнейшие этапы цикла.</li>
+        </ul>
+        <p class="dashed">О формате и датах следующих учений мы расскажем отдельно.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ДЕКАБРЬ -->
+  <section class="sec dark" id="december">
+    <div class="shower" aria-hidden="true"></div>
+    <div class="dec-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Время магии и перемен</p><h2>Декабрь — <span class="grad">особенное время</span></h2></div>
+      </div>
+      <div class="dec-wrap">
+        <div class="card card-k magic">
+          <div class="stars" aria-hidden="true"><span class="tw" style="left:44%;top:23%;--d:1.6s;--s:6px"></span><span class="tw" style="left:12%;top:72%;--d:0.4s;--s:6px"></span><span class="tw" style="left:67%;top:31%;--d:0.1s;--s:12px"></span><span class="tw" style="left:56%;top:12%;--d:1.0s;--s:12px"></span><span class="tw" style="left:10%;top:6%;--d:0.5s;--s:8px"></span><span class="tw" style="left:83%;top:84%;--d:2.3s;--s:6px"></span><span class="tw" style="left:76%;top:78%;--d:1.6s;--s:8px"></span><span class="tw" style="left:4%;top:45%;--d:3.4s;--s:10px"></span><span class="tw" style="left:93%;top:22%;--d:2.2s;--s:10px"></span><span class="tw" style="left:74%;top:94%;--d:0.7s;--s:8px"></span><span class="tw" style="left:30%;top:4%;--d:2.2s;--s:6px"></span><span class="tw" style="left:85%;top:8%;--d:2.5s;--s:12px"></span><span class="tw" style="left:96%;top:62%;--d:1.7s;--s:10px"></span><span class="tw" style="left:52%;top:96%;--d:3.7s;--s:10px"></span><span class="tw" style="left:22%;top:94%;--d:3.2s;--s:8px"></span><span class="tw" style="left:2%;top:88%;--d:1.2s;--s:12px"></span></div>
+          <div class="prose">
+            <p class="big">Время, когда мы подводим итоги, смотрим на прошедший год и особенно ясно чувствуем, что хотим изменить в следующем.</p>
+            <p>Три дня с Питером и Марией Мёртл — возможность выйти из привычной рутины, полностью погрузиться в практику и посмотреть на свою жизнь через призму учений системы семян.</p>
+            <p>Не урывками между работой и повседневными делами, а посвятив этому три полноценных дня — вместе с учителями и другими практикующими.</p>
+            <p>Это возможность заложить новые семена для тех изменений, которые вы хотите увидеть в своей жизни в новом году.</p>
+          </div>
+        </div>
+        <div class="dec-art">
+          <svg class="wand-svg" viewBox="0 0 220 220" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="wandStick" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8a6512"/><stop offset=".5" stop-color="#e6bd52"/><stop offset="1" stop-color="#b5861b"/></linearGradient>
+              <radialGradient id="wandGlow"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".95"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient>
+            </defs>
+            <g class="sparks"><path class="sp sp0" d="M0,-10 C1.5,-1.5 1.5,-1.5 10,0 C1.5,1.5 1.5,1.5 0,10 C-1.5,1.5 -1.5,1.5 -10,0 C-1.5,-1.5 -1.5,-1.5 0,-10Z" transform="translate(170,40) scale(1.1)"/><path class="sp sp1" d="M0,-10 C1.5,-1.5 1.5,-1.5 10,0 C1.5,1.5 1.5,1.5 0,10 C-1.5,1.5 -1.5,1.5 -10,0 C-1.5,-1.5 -1.5,-1.5 0,-10Z" transform="translate(185,95) scale(0.7)"/><path class="sp sp2" d="M0,-10 C1.5,-1.5 1.5,-1.5 10,0 C1.5,1.5 1.5,1.5 0,10 C-1.5,1.5 -1.5,1.5 -10,0 C-1.5,-1.5 -1.5,-1.5 0,-10Z" transform="translate(150,22) scale(0.6)"/><path class="sp sp3" d="M0,-10 C1.5,-1.5 1.5,-1.5 10,0 C1.5,1.5 1.5,1.5 0,10 C-1.5,1.5 -1.5,1.5 -10,0 C-1.5,-1.5 -1.5,-1.5 0,-10Z" transform="translate(196,62) scale(0.5)"/><path class="sp sp4" d="M0,-10 C1.5,-1.5 1.5,-1.5 10,0 C1.5,1.5 1.5,1.5 0,10 C-1.5,1.5 -1.5,1.5 -10,0 C-1.5,-1.5 -1.5,-1.5 0,-10Z" transform="translate(118,30) scale(0.8)"/><path class="sp sp5" d="M0,-10 C1.5,-1.5 1.5,-1.5 10,0 C1.5,1.5 1.5,1.5 0,10 C-1.5,1.5 -1.5,1.5 -10,0 C-1.5,-1.5 -1.5,-1.5 0,-10Z" transform="translate(160,120) scale(0.55)"/></g>
+            <g class="wand">
+              <circle class="glow" cx="132" cy="68" r="46" fill="url(#wandGlow)"/>
+              <line x1="40" y1="196" x2="124" y2="80" stroke="url(#wandStick)" stroke-width="9" stroke-linecap="round"/>
+              <polygon class="wand-star" points="132.0,38.0 139.6,57.5 160.5,58.7 144.4,72.0 149.6,92.3 132.0,81.0 114.4,92.3 119.6,72.0 103.5,58.7 124.4,57.5" fill="#ddae35" stroke="#f3d991" stroke-width="2.5" stroke-linejoin="round"/>
+              <g class="trail"><circle class="dot d0" cx="132" cy="68" r="3"/><circle class="dot d1" cx="132" cy="68" r="2.4"/><circle class="dot d2" cx="132" cy="68" r="2"/><circle class="dot d3" cx="132" cy="68" r="2.6"/><circle class="dot d4" cx="132" cy="68" r="1.8"/></g>
+            </g>
+          </svg>
+          <svg class="tree-svg" viewBox="0 0 160 214" aria-hidden="true" focusable="false">
+            <defs><linearGradient id="treeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f7a4c"/><stop offset="1" stop-color="#1f4a2c"/></linearGradient></defs>
+            <g class="tree">
+              <rect x="71" y="186" width="18" height="22" rx="2" fill="#6b4a2b"/>
+              <polygon points="80,30 44,86 116,86" fill="url(#treeG)"/>
+              <polygon points="80,58 30,128 130,128" fill="url(#treeG)"/>
+              <polygon points="80,92 14,190 146,190" fill="url(#treeG)"/>
+              <path d="M52 78 Q80 92 108 74 M38 120 Q80 136 122 116 M24 182 Q80 198 136 176" fill="none" stroke="#ddae35" stroke-width="1.6" stroke-dasharray="3 4" opacity=".8"/>
+              <g class="orn o0"><line x1="70" y1="84" x2="70" y2="88" stroke="#c9a14a" stroke-width="1"/><circle cx="70" cy="92" r="5.5" fill="#8a3340"/><circle cx="68.2" cy="90.2" r="1.6" fill="#fff" opacity=".6"/></g><g class="orn o1"><line x1="96" y1="88" x2="96" y2="92" stroke="#c9a14a" stroke-width="1"/><circle cx="96" cy="96" r="5.5" fill="#ddae35"/><circle cx="94.2" cy="94.2" r="1.6" fill="#fff" opacity=".6"/></g><g class="orn o2"><line x1="54" y1="126" x2="54" y2="130" stroke="#c9a14a" stroke-width="1"/><circle cx="54" cy="134" r="5.5" fill="#ddae35"/><circle cx="52.2" cy="132.2" r="1.6" fill="#fff" opacity=".6"/></g><g class="orn o0"><line x1="84" y1="130" x2="84" y2="134" stroke="#c9a14a" stroke-width="1"/><circle cx="84" cy="138" r="5.5" fill="#8a3340"/><circle cx="82.2" cy="136.2" r="1.6" fill="#fff" opacity=".6"/></g><g class="orn o1"><line x1="112" y1="128" x2="112" y2="132" stroke="#c9a14a" stroke-width="1"/><circle cx="112" cy="136" r="5.5" fill="#f4d779"/><circle cx="110.2" cy="134.2" r="1.6" fill="#fff" opacity=".6"/></g><g class="orn o2"><line x1="40" y1="168" x2="40" y2="172" stroke="#c9a14a" stroke-width="1"/><circle cx="40" cy="176" r="5.5" fill="#8a3340"/><circle cx="38.2" cy="174.2" r="1.6" fill="#fff" opacity=".6"/></g><g class="orn o0"><line x1="120" y1="170" x2="120" y2="174" stroke="#c9a14a" stroke-width="1"/><circle cx="120" cy="178" r="5.5" fill="#ddae35"/><circle cx="118.2" cy="176.2" r="1.6" fill="#fff" opacity=".6"/></g>
+              <circle class="bulb b0" cx="60" cy="70" r="3.6" fill="#ffd76a"/><circle class="bulb b1" cx="74" cy="74" r="3.6" fill="#ff6b6b"/><circle class="bulb b2" cx="88" cy="73" r="3.6" fill="#fff3c4"/><circle class="bulb b3" cx="102" cy="69" r="3.6" fill="#ffd76a"/><circle class="bulb b4" cx="44" cy="110" r="3.6" fill="#ff9f43"/><circle class="bulb b0" cx="62" cy="114" r="3.6" fill="#ffd76a"/><circle class="bulb b1" cx="80" cy="116" r="3.6" fill="#ff6b6b"/><circle class="bulb b2" cx="98" cy="114" r="3.6" fill="#fff3c4"/><circle class="bulb b3" cx="116" cy="110" r="3.6" fill="#ffd76a"/><circle class="bulb b4" cx="32" cy="152" r="3.6" fill="#ff9f43"/><circle class="bulb b0" cx="50" cy="157" r="3.6" fill="#ffd76a"/><circle class="bulb b1" cx="70" cy="160" r="3.6" fill="#ff6b6b"/><circle class="bulb b2" cx="90" cy="160" r="3.6" fill="#fff3c4"/><circle class="bulb b3" cx="110" cy="157" r="3.6" fill="#ffd76a"/><circle class="bulb b4" cx="128" cy="152" r="3.6" fill="#ff9f43"/>
+              <polygon class="tree-star" points="80.0,9.0 83.8,18.7 94.3,19.4 86.2,26.0 88.8,36.1 80.0,30.5 71.2,36.1 73.8,26.0 65.7,19.4 76.2,18.7" fill="#ddae35" stroke="#a87a14" stroke-width="1.5" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="callout-box"><p class="callout">Настоящие изменения начинаются тогда, когда знания становятся <span class="grad">ежедневной практикой</span>.</p></div>
+    </div>
+  </section>
+
+  <!-- СООБЩЕСТВО -->
+  <div class="mega-wrap">
+    <section class="mega cream sec" id="together">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Сила сообщества</p><h2>Почему важно быть вместе</h2></div>
+        </div>
+        <div class="comm-grid">
+          <figure class="c-main">
+            <img src="img/community.jpg" width="1200" height="900" alt="Участники одного из прошлых мероприятий Академии в зале" loading="lazy">
+            <div class="bokeh" aria-hidden="true"></div>
+            <figcaption><span>Одно из наших прошлых мероприятий</span></figcaption>
+          </figure>
+          <div class="card card-w c-txt">
+            <p class="big">Сегодня особенно важно не оставаться наедине со своей практикой.</p>
+            <div class="prose">
+              <p>Живые встречи помогают выйти из привычной рутины, провести несколько полноценных дней рядом с учителями и почувствовать поддержку сообщества людей, которые движутся в одном направлении.</p>
+              <p>Это пространство, где знания становятся опытом:</p>
+            </div>
+            <ul class="dots">
+              <li>через живой контакт с учителями;</li>
+              <li>совместные медитации;</li>
+              <li>вопросы и обсуждения;</li>
+              <li>группы мудрости;</li>
+              <li>утреннюю йогу;</li>
+              <li>общение и совместную практику.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="online"><i aria-hidden="true"></i><p>Если приехать в Вену не получается, вы сможете присоединиться онлайн бесплатно. Но если возможность приехать есть, мы очень рекомендуем прожить эти три дня вместе с учителями и сангхой.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ФОРМАТ -->
+  <section class="sec dark" id="format">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Что вас ждёт</p><h2>Три дня <span class="grad">глубокого погружения</span></h2></div>
+      </div>
+      <ul class="fmt-grid">
+        <li class="hl"><span class="n">01</span>Учения Питера и Марии Мёртл</li>
+        <li><span class="n">02</span>Медитации и практические объяснения</li>
+        <li><span class="n">03</span>Знакомство с шаматхой и этапами развития концентрации</li>
+        <li><span class="n">04</span>Учения о мудрости и подготовке ума к прямому восприятию пустоты</li>
+        <li><span class="n">05</span>Утренняя йога</li>
+        <li><span class="n">06</span>Группы мудрости</li>
+        <li><span class="n">07</span>Общение с единомышленниками</li>
+        <li><span class="n">08</span>Практические задания для ежедневной жизни</li>
+        <li class="hl"><span class="n">09</span>Праздничная атмосфера предрождественской Вены</li>
+      </ul>
+      <p class="note" style="margin-top:18px">Подробное расписание будет опубликовано дополнительно.</p>
+    </div>
+  </section>
+
+  <div class="sep-line" aria-hidden="true"></div>
+
+  <!-- РАСПИСАНИЕ -->
+  <section class="sec dark" id="schedule">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Расписание</p><h2>Три дня в Вене</h2></div>
+      </div>
+      <div class="days">
+        <article class="day"><div class="top"><span class="dnum">19</span><span class="dname">Суббота</span></div><span class="ddate">19 декабря</span><span class="dtime">Начало в 11:00</span><p class="dwhat">Открытие и первые учения</p></article>
+        <article class="day"><div class="top"><span class="dnum">20</span><span class="dname">Воскресенье</span></div><span class="ddate">20 декабря</span><span class="dtime">Полный день</span><p class="dwhat">Утренняя йога, медитации, учения, группы мудрости</p></article>
+        <article class="day"><div class="top"><span class="dnum">21</span><span class="dname">Понедельник</span></div><span class="ddate">21 декабря</span><span class="dtime">Завершение в 20:00–21:00</span><p class="dwhat">Учения, медитации и завершение встречи</p></article>
+      </div>
+      <p class="sched-hint">Планируйте приезд к утру субботы, а отъезд — вечером в понедельник или утром во вторник.</p>
+      <p class="note" style="margin-top:16px">Подробное расписание по часам опубликуем ближе к мероприятию.</p>
+    </div>
+  </section>
+
+  <!-- УЧИТЕЛЯ -->
+  <div class="mega-wrap">
+    <section class="mega cream sec" id="teachers">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Учителя</p><h2 class="nc">Питер и Мария Мёртл</h2></div>
+        </div>
+        <div class="t-grid">
+          <div class="t-photos">
+            <figure><img src="img/teachers-portrait.jpg" width="562" height="1000" alt="Питер и Мария Мёртл" loading="lazy" style="object-position:50% 40%"></figure>
+            <figure><img src="img/selfie.jpg" width="562" height="1000" alt="Питер и Мария Мёртл" loading="lazy" style="object-position:50% 38%"></figure>
+          </div>
+          <div class="card card-w">
+            <div class="prose">
+              <p class="big">Старшие преподаватели Института азиатской классики и многолетние ученики Геше Майкла Роуча.</p>
+              <p>Питер Мёртл изучает и практикует эти знания с 2007 года. Он лично присутствовал на многих учениях цикла Ламрима, который передавал Геше Майкл, включая первые учения в Прескотте.</p>
+              <p>Питер и Мария Мёртл прошли многочисленные длительные молчаливые ретриты, преподают философию, медитацию и систему семян и помогают ученикам соединять глубокие знания с реальной жизнью.</p>
+              <p>Во время недавней встречи в США они получили <b>личное благословение Геше Майкла</b> начать новый систематический цикл Ламрима.</p>
+            </div>
+          </div>
+        </div>
+        <div class="t-bios">
+          <article class="card card-k">
+            <h3 class="nc">Питер Мёртл</h3>
+            <p>Бизнес-тренер DCI Global, основатель Diamond Mind Academy, автор курса по медитации и писатель. Магистр Венского университета экономики и бизнеса, много лет руководил подразделениями крупных международных компаний.</p>
+          </article>
+          <article class="card card-k">
+            <h3 class="nc">Мария Мёртл</h3>
+            <p>Бизнес-тренер DCI Global, автор программ «Коуч Алмазной Мудрости» и «Финансовый карма-коуч», сооснователь Pink Diamond и основатель международного Gold Клуба. Переводит и издаёт классические тексты мудрости на русском языке.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- УЧАСТИЕ -->
+  <section class="sec dark" id="tickets">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Варианты участия</p><h2>Выберите <span class="grad">свой формат</span></h2></div>
+        <p>19–21 декабря · Вена + онлайн</p>
+      </div>
+      <div class="tar">
+        <article class="tc rec">
+          <span class="flag">Рекомендуем</span>
+          <h3>Вживую</h3>
+          <div class="price">169&nbsp;<small>€</small></div>
+          <ul><li>Учения и медитации с учителями</li><li>Утренняя йога</li><li>Группы мудрости</li><li>Живое общение с учителями и сообществом</li><li>Полное погружение в атмосферу мероприятия</li></ul>
+          <p class="seats">Рекомендуемый формат для тех, кто хочет прожить эти три дня рядом с учителями и сангхой.</p>
+          <a class="btn btn-dark" href="https://secure.wayforpay.com/button/bcc4309a38938" target="_blank" rel="noopener">Забронировать место <span class="ar" aria-hidden="true">→</span></a>
+        </article>
+        <article class="tc vip">
+          <div class="crown" aria-hidden="true">
+            <svg viewBox="0 0 64 54" width="64" height="54" focusable="false">
+              <defs>
+                <linearGradient id="crownGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4d779"/><stop offset=".55" stop-color="#ddae35"/><stop offset="1" stop-color="#a87a14"/></linearGradient>
+                <linearGradient id="crownShine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+                <clipPath id="crownClip"><path d="M5 20 L19 31 L32 9 L45 31 L59 20 L54 45 L10 45 Z"/><rect x="10" y="45" width="44" height="6" rx="1.5"/></clipPath>
+              </defs>
+              <path d="M5 20 L19 31 L32 9 L45 31 L59 20 L54 45 L10 45 Z" fill="url(#crownGold)" stroke="#8a6512" stroke-width="1.5" stroke-linejoin="round"/>
+              <rect x="10" y="45" width="44" height="6" rx="1.5" fill="url(#crownGold)" stroke="#8a6512" stroke-width="1.5"/>
+              <circle cx="32" cy="36" r="3.4" fill="#69232d"/>
+              <circle cx="21" cy="39" r="2.3" fill="#69232d"/>
+              <circle cx="43" cy="39" r="2.3" fill="#69232d"/>
+              <circle cx="5" cy="19" r="3.6" fill="#f4d779" stroke="#8a6512" stroke-width="1.2"/>
+              <circle cx="32" cy="7" r="3.8" fill="#f4d779" stroke="#8a6512" stroke-width="1.2"/>
+              <circle cx="59" cy="19" r="3.6" fill="#f4d779" stroke="#8a6512" stroke-width="1.2"/>
+              <g clip-path="url(#crownClip)"><rect class="crown-shine" x="-30" y="0" width="22" height="54" fill="url(#crownShine)"/></g>
+            </svg>
+            <span class="cs cs1"></span><span class="cs cs2"></span><span class="cs cs3"></span><span class="cs cs4"></span>
+          </div>
+          <span class="flag">VIP</span>
+          <h3>Вживую VIP</h3>
+          <div class="price">600&nbsp;<small>€</small></div>
+          <ul><li>Вся основная программа</li><li>VIP-места в зале</li><li>Личный ассистент</li><li>Обед с учителями</li></ul>
+          <p class="seats">Количество мест ограничено.</p>
+          <a class="btn btn-gold" href="https://secure.wayforpay.com/button/bc78e3106b571" target="_blank" rel="noopener">Забронировать VIP-место</a>
+        </article>
+        <article class="tc free">
+          <span class="flag" style="background:rgba(247,239,230,.1)">Из любой точки мира</span>
+          <h3>Онлайн</h3>
+          <div class="price">Бесплатно</div>
+          <ul><li>Трансляция учений и медитаций из Вены</li><li>Возможность присоединиться из любой точки мира</li></ul>
+          <p class="seats">Регистрация через Telegram</p>
+          <a class="btn btn-ghost" href="https://t.me/+8ZHHve0PD4VjOTIy" target="_blank" rel="noopener">Зарегистрироваться онлайн</a>
+        </article>
+      </div>
+      <div class="growth">
+        <h3>Цена растёт по мере продажи мест</h3>
+        <ol class="ladder">
+          <li><b>109 €</b><span>Первые 30 мест</span></li>
+          <li><b>139 €</b><span>Следующие 30 мест</span></li>
+          <li><b>169 €</b><span>Следующие 70 мест</span></li>
+          <li><b>199 €</b><span>Далее</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- МЕСТО -->
+  <div class="mega-wrap">
+    <section class="mega cream sec" id="place">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Место проведения</p><h2>Austria Trend Hotel Savoyen Vienna</h2></div>
+        </div>
+        <div class="place-grid">
+          <figure><img src="img/hotel.jpg" width="862" height="570" alt="Фасад отеля Austria Trend Hotel Savoyen Vienna вечером" loading="lazy"></figure>
+          <div class="card card-k place-card">
+            <div>
+              <span class="pin" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <p class="addr">Rennweg 16, 1030 Wien, Österreich</p>
+            </div>
+            <a class="btn btn-gold" href="https://maps.app.goo.gl/iXfuqBi8AdQGW6118" target="_blank" rel="noopener" style="align-self:flex-start">Открыть на карте <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQ -->
+  <section class="sec dark" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Частые вопросы</p><h2>Вопросы и ответы</h2></div>
+      </div>
+      <div class="faq-wrap">
+        <div class="faq">
+          <details>
+            <summary>Разве в апреле уже не было Ламрима?</summary>
+            <div class="ans">
+              <p>В апреле мы изучали конкретную практику — медитацию, которая называется «Ламрим», то есть медитацию по этапам пути.</p>
+              <p>В декабре начинается новый систематический цикл учений по Ламриму как целостной карте пути. Это не повторение апрельской программы, а следующий, значительно более масштабный этап.</p>
+              <p>Участники апрельских учений смогут продолжить и углубить практику. Новички смогут присоединиться без предварительной подготовки.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Зачем мне Ламрим, если я получил(а) прямую передачу Алмазного пути?</summary>
+            <div class="ans">
+              <p>Передача открывает дверь, но не заменяет дальнейшее обучение и ежедневную практику.</p>
+              <p>Ламрим даёт основу и последовательную карту, необходимые для понимания и практики Алмазного пути. По опыту Питера Мёртла, эти два направления поддерживают и усиливают друг друга.</p>
+              <p>Сам Питер Мёртл изучал Ламрим у Геше Майкла параллельно с Алмазным путём.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Я проходил(а) ACI 3. Это будет повторением?</summary>
+            <div class="ans">
+              <p>Некоторые базовые темы могут пересекаться, и это естественно. Но цель и глубина программы отличаются.</p>
+              <p>ACI 3 даёт общее введение в медитацию: как начать практиковать и работать со своим умом.</p>
+              <p>Новый цикл сосредоточен на развитии шаматхи и подготовке ума к прямому восприятию пустоты. Поэтому декабрьские учения станут не повторением, а продолжением и углублением вашей практики.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Я новичок. Мне подойдёт?</summary>
+            <div class="ans">
+              <p>Да. Ламрим выстраивает путь последовательно, поэтому может стать прекрасным началом даже для человека, который пока не знаком с курсами ACI и тибетской философией.</p>
+              <p>Учителя будут объяснять материал доступно, постепенно вводя необходимые понятия.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Можно ли присоединиться, если я не был(а) на апрельских учениях?</summary>
+            <div class="ans">
+              <p>Да. Апрельская программа не является обязательным условием участия.</p>
+              <p>Новый цикл начинается в декабре, поэтому присоединиться можно без предварительной подготовки.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Мы пройдём весь Ламрим за три дня?</summary>
+            <div class="ans">
+              <p>Нет. В декабре начнётся первый этап большого цикла.</p>
+              <p>При этом встреча будет иметь самостоятельную ценность: вы получите конкретные знания и практики, которые сможете применять сразу после мероприятия.</p>
+              <p>О формате и датах следующих этапов мы расскажем отдельно.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Обязательно ли участвовать во всём дальнейшем цикле?</summary>
+            <div class="ans">
+              <p>Нет. Вам не нужно сейчас принимать решение на несколько лет вперёд.</p>
+              <p>После декабрьской встречи вы сможете самостоятельно решить, хотите ли продолжать обучение.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Можно ли участвовать онлайн?</summary>
+            <div class="ans">
+              <p>Да. Онлайн-трансляция будет бесплатной.</p>
+              <p>Если у вас есть возможность приехать в Вену, рекомендуем очное участие: живой контакт с учителями, совместная практика и пространство сообщества создают совершенно другой уровень погружения.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФОТО -->
+  <div class="mega-wrap">
+    <section class="mega cream sec" id="photos">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Как это было</p><h2>Фото с наших прошлых мероприятий</h2></div>
+        </div>
+        <div class="gallery" id="gallery">
+          <img src="img/gal/g01.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g02.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g03.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g04.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g05.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g06.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g07.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g08.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g09.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g10.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g11.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g12.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy">
+          <img src="img/gal/g13.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g14.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g15.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g16.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g17.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g18.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g19.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g20.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g21.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g22.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g23.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g24.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g25.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g26.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g27.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g28.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g29.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g30.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g31.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g32.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g33.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+          <img src="img/gal/g34.jpg" alt="Фото с прошлых мероприятий Академии" loading="lazy" hidden>
+        </div>
+        <div class="more-row"><button class="btn btn-line-d" type="button" id="gallery-more">Показать все фото</button></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ФИНАЛ -->
+  <section class="sec dark final">
+    <div class="wrap">
+      <h2>Станьте частью <span class="grad">нового этапа пути</span></h2>
+      <ul class="final-steps">
+        <li><span class="tag t-line" style="color:var(--text-lm)">Апрель</span>В апреле мы познакомились с отдельной практикой — медитацией «Ламрим».</li>
+        <li><span class="tag t-burg">Октябрь</span>В октябре Питер и Мария Мёртл получили личное наставление и благословение своего учителя.</li>
+        <li><span class="tag t-gold">Декабрь</span>А в декабре начинается большой систематический цикл, который поможет соединить отдельные знания и ежедневные практики в целостный путь.</li>
+      </ul>
+      <p class="when">19–21 декабря · Вена + онлайн</p>
+      <p class="cta-p">Приходите, чтобы сделать этот первый шаг вместе с учителями и сообществом.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#tickets">Забронировать место в Вене <span class="ar" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="https://t.me/+8ZHHve0PD4VjOTIy" target="_blank" rel="noopener">Присоединиться онлайн</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <img src="img/logo-full.png" width="360" height="360" alt="Академия Классической Мудрости" loading="lazy">
+  <span>Отдел заботы: <a href="https://t.me/Mila_Mish" target="_blank" rel="noopener">Telegram</a> · acirussian2@gmail.com</span>
+  <span>ФОП Беліцька Олеся Олександрівна | ЄДРПОУ 2991816226 · <a href="https://lp.classicwisdomacademy.com/ofertakk" target="_blank" rel="noopener">Оферта</a></span>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO='IntersectionObserver' in window;
+
+  /* burger */
+  var b=document.getElementById('menu-btn'),m=document.getElementById('mnav'),h=document.querySelector('.hdr-in');
+  if(b&&m){
+    function place(){m.style.top=(h.getBoundingClientRect().bottom+10)+'px';}
+    function close(){m.hidden=true;b.setAttribute('aria-expanded','false');}
+    b.addEventListener('click',function(){var open=m.hidden;if(open)place();m.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');});
+    m.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+    document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target)&&!b.contains(e.target))close();});
+    window.addEventListener('resize',function(){if(!m.hidden)place();});
+  }
+
+  /* gallery */
+  var gb=document.getElementById('gallery-more');
+  if(gb)gb.addEventListener('click',function(){document.querySelectorAll('#gallery img[hidden]').forEach(function(i){i.hidden=false;});gb.parentNode.remove();});
+
+  function onView(el,thr,enter,leave){
+    if(!el)return;
+    if(!hasIO){enter(true);return;}
+    var armed=true;
+    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){enter(armed);armed=false;}else{armed=true;if(leave)leave();}});},{threshold:thr}).observe(el);
+  }
+
+  /* falling Tibetan letters */
+  var pr=document.getElementById('practice'),lbox=pr&&pr.querySelector('.letters');
+  var G='ཀཁགངཅཆཇཉཏཐདནཔཕབམཙཚཛཝཞཟའཡརལཤསཧཨ';
+  onView(pr,.3,function(fresh){if(!fresh||reduce)return;for(var i=0;i<54;i++){(function(i){setTimeout(function(){var st=document.createElement('span');st.className='glyph'+(Math.random()<.25?' rose':'');st.textContent=G[Math.floor(Math.random()*G.length)];st.style.left=(Math.random()*100)+'%';st.style.setProperty('--fs',(16+Math.random()*18).toFixed(0)+'px');st.style.setProperty('--dur',(3+Math.random()*2.8).toFixed(2)+'s');st.style.setProperty('--dx',(Math.random()*40-20).toFixed(0)+'px');lbox.appendChild(st);setTimeout(function(){st.remove();},6200);},i*70);})(i);}});
+
+  /* star shower */
+  var dec=document.getElementById('december'),sbox=dec&&dec.querySelector('.shower');
+  onView(dec,.3,function(fresh){dec.classList.add('is-on');if(!fresh||reduce)return;for(var i=0;i<48;i++){(function(i){setTimeout(function(){var st=document.createElement('span');st.className='fall'+(Math.random()<.4?' l':'');st.style.left=(Math.random()*100)+'%';st.style.setProperty('--sz',(7+Math.random()*12).toFixed(1)+'px');st.style.setProperty('--dur',(2.6+Math.random()*2.4).toFixed(2)+'s');st.style.setProperty('--dx',(Math.random()*90-45).toFixed(0)+'px');sbox.appendChild(st);setTimeout(function(){st.remove();},5400);},i*65);})(i);}},function(){dec.classList.remove('is-on');});
+
+  /* rising golden lights */
+  var tg=document.getElementById('together'),fig=tg&&tg.querySelector('.c-main'),bk=fig&&fig.querySelector('.bokeh');
+  onView(fig,.45,function(fresh){tg.classList.add('is-on');if(!fresh||reduce)return;for(var i=0;i<55;i++){(function(i){setTimeout(function(){var s=document.createElement('span');s.style.left=(Math.random()*100)+'%';s.style.setProperty('--sz',(18+Math.random()*34).toFixed(0)+'px');s.style.setProperty('--dur',(3+Math.random()*3).toFixed(2)+'s');s.style.setProperty('--dx',(Math.random()*60-30).toFixed(0)+'px');bk.appendChild(s);setTimeout(function(){s.remove();},6500);},i*90);})(i);}},function(){tg.classList.remove('is-on');});
+})();
+</script>
+</body>
+</html>
