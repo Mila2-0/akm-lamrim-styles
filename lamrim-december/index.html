@@ -553,6 +553,13 @@ body{font-weight:500}
   .hero-people{position:relative;right:auto;align-self:center;height:auto;width:min(78vw,420px);margin-top:-4px}
   .hero-people img{width:100%;height:auto}
 }
+
+/* ===== акценты первого экрана ===== */
+.hero h1{font-size:clamp(18px,1.7vw,24px);font-weight:700;line-height:1.25;color:var(--cream);letter-spacing:-.01em;margin-top:2px}
+.hero .pro{margin-top:6px}
+.pro-title{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.3vw,50px);line-height:1.08;letter-spacing:-.02em;color:#fff;max-width:15.5em;text-wrap:balance;text-shadow:0 6px 40px rgba(26,16,18,.5)}
+.hero .lead{display:inline-block;padding:10px 20px;border-radius:999px;background:rgba(26,16,18,.42);border:1px solid rgba(243,217,145,.32);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);text-shadow:none;font-size:16.5px}
+@media (max-width:640px){.hero .lead{border-radius:18px}.pro-title{font-size:clamp(20px,6.1vw,30px)}}
 </style>
 </head>
 <body>
@@ -605,7 +612,8 @@ body{font-weight:500}
         <div class="tib" lang="bo" aria-hidden="true" data-text="ལམ་རིམ།"><span>ལམ</span><span>་</span><span>རིམ</span><span>།</span></div>
         <span class="with"><i></i>С Питером и Марией Мёртл</span>
         <h1>Практики системы семян для ежедневной жизни</h1>
-        <p class="pro"><b>Медитация Pro</b><span>Как увидеть пустоту напрямую с помощью специализированных техник медитации</span></p>
+        <p class="pro"><b>Медитация Pro</b></p>
+        <p class="pro-title">Как увидеть <span class="grad">пустоту напрямую</span> с помощью специализированных техник медитации</p>
         <p class="lead">Начало нового цикла учений по Ламриму.</p>
         <div class="facts">
           <div><b>19–21 декабря</b><span>три дня учений</span></div>
