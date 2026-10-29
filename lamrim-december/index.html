@@ -364,9 +364,10 @@ body{font-weight:500}
 .online i{flex-shrink:0;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
 
 /* format / schedule */
-.fmt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.fmt-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .fmt-grid li{list-style:none;display:flex;align-items:center;gap:14px;border-radius:999px;padding:14px 22px 14px 14px;background:var(--ink-3);border:1px solid var(--line-l);color:var(--text-l)!important;font-weight:700;font-size:15px;line-height:1.35;min-width:0}
 .fmt-grid li .n{flex-shrink:0;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--ink);font-family:var(--display);font-size:12px;font-weight:700}
+.fmt-grid li{border-radius:26px!important;align-items:center}
 .fmt-grid li.hl{background:linear-gradient(120deg,var(--burg-2),var(--burg))}
 .sep-line{height:1px;background:var(--line-l);margin:0 auto;max-width:76rem}
 .days{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -1012,7 +1013,7 @@ body{font-weight:500}
       <ul class="fmt-grid">
         <li class="hl"><span class="n">01</span>Занятия с Питером и Марией Мёртл</li>
         <li class="hl"><span class="n">02</span>Специализированные техники медитации, чтобы увидеть пустоту напрямую</li>
-        <li><span class="n">03</span>Медитации и практические объяснения</li>
+        <li><span class="n">03</span>Практические объяснения и ответы на вопросы</li>
         <li><span class="n">04</span>Утренняя йога</li>
         <li><span class="n">05</span>Группы мудрости</li>
         <li><span class="n">06</span>Общение с единомышленниками</li>
