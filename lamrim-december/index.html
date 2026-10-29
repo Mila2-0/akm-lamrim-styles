@@ -617,6 +617,29 @@ body{font-weight:500}
   .pro-title{max-width:100%!important}
   .hero .ctas{position:relative}
 }
+
+/* ===== слайд-шоу «Сила сообщества» ===== */
+.c-main img.slide{opacity:0;transform:scale(1.06);transition:opacity 1.4s ease,transform 6s ease-out}
+.c-main img.slide.on{opacity:1;transform:scale(1)}
+.c-main .glow{position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(243,217,145,.55),inset 0 0 60px rgba(221,174,53,.35);background:radial-gradient(ellipse at 50% 120%,rgba(243,217,145,.35),transparent 55%),radial-gradient(ellipse at 10% -10%,rgba(232,185,168,.25),transparent 45%);animation:glowPulse 4s ease-in-out infinite alternate}
+@keyframes glowPulse{from{opacity:.65}to{opacity:1}}
+.c-main{box-shadow:0 0 0 1px rgba(221,174,53,.35),0 20px 60px -20px rgba(221,174,53,.45)}
+.sparkles{position:absolute;inset:0;z-index:2;pointer-events:none}
+.sparkles i{position:absolute;width:12px;height:12px;background:#f3d991;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);filter:drop-shadow(0 0 6px #ddae35);opacity:0;animation:spark 3.2s ease-in-out infinite}
+.sparkles i:nth-child(1){left:8%;top:12%;animation-delay:0s}
+.sparkles i:nth-child(2){left:86%;top:9%;animation-delay:.6s;width:16px;height:16px}
+.sparkles i:nth-child(3){left:72%;top:78%;animation-delay:1.2s}
+.sparkles i:nth-child(4){left:18%;top:70%;animation-delay:1.8s;width:9px;height:9px}
+.sparkles i:nth-child(5){left:48%;top:6%;animation-delay:2.3s}
+.sparkles i:nth-child(6){left:93%;top:52%;animation-delay:.9s;width:9px;height:9px}
+.sparkles i:nth-child(7){left:4%;top:44%;animation-delay:2.7s;width:14px;height:14px}
+@keyframes spark{0%,100%{opacity:0;transform:scale(.3) rotate(0)}45%{opacity:1;transform:scale(1.15) rotate(45deg)}}
+.c-main .dots{position:absolute;z-index:3;left:0;right:0;top:auto!important;bottom:16px;display:flex!important;flex-direction:row!important;justify-content:center;align-items:center;gap:8px}
+.c-main .dots b{display:block;height:8px!important}
+@media (max-width:1100px){.c-main{min-height:0!important;aspect-ratio:4/3}}
+.c-main .dots b{width:8px;height:8px;border-radius:50%;background:rgba(247,239,230,.5);transition:all .4s ease}
+.c-main .dots b.on{width:24px;border-radius:99px;background:var(--gold-l)}
+@media (prefers-reduced-motion: reduce){.c-main .glow,.sparkles i{animation:none}.sparkles i{opacity:.7}}
 </style>
 </head>
 <body>
@@ -979,9 +1002,14 @@ body{font-weight:500}
         </div>
         <div class="comm-grid">
           <figure class="c-main">
-            <img src="img/community.jpg" width="1200" height="900" alt="Участники одного из прошлых мероприятий Академии в зале" loading="lazy">
+            <img class="slide on" src="img/comm-1.jpg" width="1200" height="900" alt="Большое групповое фото участников прошлых учений">
+            <img class="slide" src="img/comm-2.jpg" width="1200" height="900" alt="Радость в зале на прошлых учениях" loading="lazy">
+            <img class="slide" src="img/comm-3.jpg" width="1200" height="900" alt="Учителя проходят через зал под аплодисменты" loading="lazy">
+            <img class="slide" src="img/comm-4.jpg" width="1200" height="900" alt="Общая медитация на ковриках в зале" loading="lazy">
+            <div class="glow" aria-hidden="true"></div>
+            <div class="sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div class="bokeh" aria-hidden="true"></div>
-            <figcaption><span>Одно из наших прошлых мероприятий</span></figcaption>
+            <div class="dots" aria-hidden="true"><b class="on"></b><b></b><b></b><b></b></div>
           </figure>
           <div class="card card-w c-txt">
             <p class="big">Сегодня особенно важно не оставаться наедине со своей практикой.</p>
@@ -1347,5 +1375,10 @@ body{font-weight:500}
   onView(fig,.45,function(fresh){tg.classList.add('is-on');if(!fresh||reduce)return;for(var i=0;i<55;i++){(function(i){setTimeout(function(){var s=document.createElement('span');s.style.left=(Math.random()*100)+'%';s.style.setProperty('--sz',(18+Math.random()*34).toFixed(0)+'px');s.style.setProperty('--dur',(3+Math.random()*3).toFixed(2)+'s');s.style.setProperty('--dx',(Math.random()*60-30).toFixed(0)+'px');bk.appendChild(s);setTimeout(function(){s.remove();},6500);},i*90);})(i);}},function(){tg.classList.remove('is-on');});
 })();
 </script>
+  <script>
+  (function(){var f=document.querySelector('#together .c-main');if(!f)return;var sl=f.querySelectorAll('img.slide'),dt=f.querySelectorAll('.dots b'),i=0;if(sl.length<2)return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  setInterval(function(){sl[i].classList.remove('on');dt[i]&&dt[i].classList.remove('on');i=(i+1)%sl.length;sl[i].classList.add('on');dt[i]&&dt[i].classList.add('on');},4500);})();
+  </script>
 </body>
 </html>
