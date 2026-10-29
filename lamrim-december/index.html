@@ -543,6 +543,16 @@ body{font-weight:500}
 .dark .card-d,.dark .lam-grid li,.dark .fmt-grid li,.dark .day,.dark .tc.free,.dark .online,.burgm .card-d{background:rgba(40,24,28,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .dark .tc.vip{background:linear-gradient(160deg,rgba(105,35,45,.82),rgba(58,18,25,.78))}
 .dark .faq details,.dark .faq-item{background:rgba(40,24,28,.55)}
+
+/* ===== учителя без фона внизу первого экрана ===== */
+.hero-people{position:absolute;z-index:3;bottom:0;right:max(24px,calc((100vw - 80rem)/2 + 24px));height:min(88%,800px);pointer-events:none}
+.hero-people img{height:100%;width:auto;display:block;-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 80%,transparent 100%)}
+@media (max-width:1100px){
+  .hero{flex-direction:column;align-items:stretch}
+  .hero-in{grid-template-columns:1fr;padding-bottom:8px}
+  .hero-people{position:relative;right:auto;align-self:center;height:auto;width:min(78vw,420px);margin-top:-4px}
+  .hero-people img{width:100%;height:auto}
+}
 </style>
 </head>
 <body>
@@ -606,11 +616,8 @@ body{font-weight:500}
           <a class="btn btn-ghost" href="https://t.me/+8ZHHve0PD4VjOTIy" target="_blank" rel="noopener">Участвовать онлайн бесплатно</a>
         </div>
       </div>
-      <figure class="hero-photo">
-        <img src="img/arizona-pair-hd.jpg" width="960" height="1280" alt="Питер и Мария Мёртл на фоне красных скал Аризоны">
-        
-      </figure>
     </div>
+    <div class="hero-people"><img src="img/teachers-cut.png" width="559" height="900" alt="Питер и Мария Мёртл"></div>
   </section>
 
   <!-- ТЕМА -->
@@ -859,10 +866,8 @@ body{font-weight:500}
           <li><span class="n">2</span>получите знания о развитии концентрации;</li>
           <li><span class="n">3</span>познакомитесь с препятствиями в медитации и способами работы с ними;</li>
           <li><span class="n">4</span>увидите связь между медитацией, мудростью и пустотой;</li>
-          <li><span class="n">5</span>получите практики, которые сможете включить в ежедневную жизнь;</li>
-          <li><span class="n">6</span>сами решите, хотите ли продолжать дальнейшие этапы цикла.</li>
+          <li><span class="n">5</span>получите практики, которые сможете включить в ежедневную жизнь.</li>
         </ul>
-        <p class="dashed">О формате и датах следующих учений мы расскажем отдельно.</p>
       </div>
     </section>
   </div>
