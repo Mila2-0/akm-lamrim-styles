@@ -45,7 +45,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--ink);color:var(--text-l);font-family:var(--sans);font-size:17px;line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{background:var(--ink);isolation:isolate;color:var(--text-l);font-family:var(--sans);font-size:17px;line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -535,9 +535,18 @@ body{font-weight:500}
   .tw{opacity:.5}.sp{opacity:.8}.bulb{opacity:1}.cs{opacity:.8}
   .btn-gold::after,.btn-dark::after{display:none}
 }
+
+/* ===== Седона под тёмными блоками ===== */
+.sedona-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(26,16,18,.55) 0%,rgba(26,16,18,.62) 50%,rgba(26,16,18,.7) 100%),url("img/sedona-rock.jpg") center 30%/cover no-repeat}
+.burgm{background:linear-gradient(170deg,rgba(58,18,25,.72) 0%,rgba(36,22,26,.62) 55%,rgba(26,16,18,.6) 100%)!important;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.dark .card-k,.burgm .card-k{background:linear-gradient(160deg,rgba(47,29,34,.72) 0%,rgba(26,16,18,.62) 75%)}
+.dark .card-d,.dark .lam-grid li,.dark .fmt-grid li,.dark .day,.dark .tc.free,.dark .online,.burgm .card-d{background:rgba(40,24,28,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.dark .tc.vip{background:linear-gradient(160deg,rgba(105,35,45,.82),rgba(58,18,25,.78))}
+.dark .faq details,.dark .faq-item{background:rgba(40,24,28,.55)}
 </style>
 </head>
 <body>
+<div class="sedona-bg" aria-hidden="true"></div>
 
 <header class="hdr">
   <div class="hdr-in">
@@ -599,7 +608,7 @@ body{font-weight:500}
       </div>
       <figure class="hero-photo">
         <img src="img/arizona-pair-hd.jpg" width="960" height="1280" alt="Питер и Мария Мёртл на фоне красных скал Аризоны">
-        <figcaption><span>Питер и Мария Мёртл</span></figcaption>
+        
       </figure>
     </div>
   </section>
@@ -668,8 +677,7 @@ body{font-weight:500}
         </div>
         <div class="bento">
           <div class="card card-w span-5">
-            <span class="tag t-line" style="color:var(--burg)">Апрель</span>
-            <p style="margin-top:20px">Да, в апреле Питер и Мария Мёртл преподавали <b>конкретную медитацию, которая называется «Ламрим»</b>, — медитацию по этапам пути. Теперь речь идёт о другом масштабе.</p>
+            <p>Да, в апреле Питер и Мария Мёртл преподавали <b>конкретную медитацию, которая называется «Ламрим»</b>, — медитацию по этапам пути. Теперь речь идёт о другом масштабе.</p>
           </div>
           <div class="card card-k span-7">
             <span class="tag t-gold">Сейчас</span>
@@ -1027,7 +1035,6 @@ body{font-weight:500}
       </div>
       <div class="tar">
         <article class="tc rec">
-          <span class="flag">Рекомендуем</span>
           <h3>Вживую</h3>
           <div class="price">169&nbsp;<small>€</small></div>
           <ul><li>Учения и медитации с учителями</li><li>Утренняя йога</li><li>Группы мудрости</li><li>Живое общение с учителями и сообществом</li><li>Полное погружение в атмосферу мероприятия</li></ul>
@@ -1054,7 +1061,6 @@ body{font-weight:500}
             </svg>
             <span class="cs cs1"></span><span class="cs cs2"></span><span class="cs cs3"></span><span class="cs cs4"></span>
           </div>
-          <span class="flag">VIP</span>
           <h3>Вживую VIP</h3>
           <div class="price">600&nbsp;<small>€</small></div>
           <ul><li>Вся основная программа</li><li>VIP-места в зале</li><li>Личный ассистент</li><li>Обед с учителями</li></ul>
@@ -1062,7 +1068,6 @@ body{font-weight:500}
           <a class="btn btn-gold" href="https://secure.wayforpay.com/button/bc78e3106b571" target="_blank" rel="noopener">Забронировать VIP-место</a>
         </article>
         <article class="tc free">
-          <span class="flag" style="background:rgba(247,239,230,.1)">Из любой точки мира</span>
           <h3>Онлайн</h3>
           <div class="price">Бесплатно</div>
           <ul><li>Трансляция учений и медитаций из Вены</li><li>Возможность присоединиться из любой точки мира</li></ul>
@@ -1229,9 +1234,9 @@ body{font-weight:500}
     <div class="wrap">
       <h2>Станьте частью <span class="grad">нового этапа пути</span></h2>
       <ul class="final-steps">
-        <li><span class="tag t-line" style="color:var(--text-lm)">Апрель</span>В апреле мы познакомились с отдельной практикой — медитацией «Ламрим».</li>
-        <li><span class="tag t-burg">Октябрь</span>В октябре Питер и Мария Мёртл получили личное наставление и благословение своего учителя.</li>
-        <li><span class="tag t-gold">Декабрь</span>А в декабре начинается большой систематический цикл, который поможет соединить отдельные знания и ежедневные практики в целостный путь.</li>
+        <li>В апреле мы познакомились с отдельной практикой — медитацией «Ламрим».</li>
+        <li>В октябре Питер и Мария Мёртл получили личное наставление и благословение своего учителя.</li>
+        <li>А в декабре начинается большой систематический цикл, который поможет соединить отдельные знания и ежедневные практики в целостный путь.</li>
       </ul>
       <p class="when">19–21 декабря · Вена + онлайн</p>
       <p class="cta-p">Приходите, чтобы сделать этот первый шаг вместе с учителями и сообществом.</p>
