@@ -332,6 +332,23 @@ body{font-weight:500}
 @media (max-width:640px){.road .rh{display:none}.road .rv{display:block}}
 @media (prefers-reduced-motion: reduce){.road .pt.on circle.h,.road .sun .rays{animation:none}}
 
+/* live photo strips */
+.live{display:grid;gap:12px;margin-top:28px}
+.live-2{grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr)}
+.live-4{grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr) minmax(0,1.6fr) minmax(0,.8fr);margin-top:22px}
+.live figure{position:relative;height:240px;border-radius:20px;overflow:hidden;border:1px solid rgba(243,217,145,.28);box-shadow:0 24px 50px -30px rgba(0,0,0,.7);opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.live.in figure{opacity:1;transform:none}
+.live.in figure:nth-child(2){transition-delay:.12s}.live.in figure:nth-child(3){transition-delay:.24s}.live.in figure:nth-child(4){transition-delay:.36s}
+.live img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.live figure:hover img{transform:scale(1.05)}
+.live figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,16,18,.35));pointer-events:none}
+@media (max-width:760px){
+  .live-2{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)}
+  .live-4{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+  .live figure{height:190px}
+}
+@media (prefers-reduced-motion: reduce){.live figure{opacity:1;transform:none;transition:none}}
+
 /* december */
 .shower{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
 .fall{position:absolute;top:-24px;width:var(--sz);height:var(--sz);background:var(--gold);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);opacity:0;animation:fall var(--dur) cubic-bezier(.35,.1,.6,1) forwards;filter:drop-shadow(0 0 4px rgba(243,217,145,.9))}
@@ -904,6 +921,10 @@ body{font-weight:500}
           <li>шаг за шагом становиться тем человеком, которым мы хотим быть.</li>
         </ul>
       </div>
+      <div class="live live-2" aria-label="Фото с наших прошлых мероприятий">
+        <figure><img src="img/live-medit.jpg" alt="Участники в медитации на ковриках" loading="lazy" style="object-position:40% 30%"></figure>
+        <figure><img src="img/live-hall.jpg" alt="Большой зал: участники медитируют на ковриках" loading="lazy" style="object-position:50% 70%"></figure>
+      </div>
       <p class="intro" style="margin-top:28px">Поэтому новый цикл задуман не только как серия лекций. Учителя хотят соединить знания с медитацией, обсуждением, самостоятельной практикой и в дальнейшем — с ретритами.</p>
       <p class="big-grad grad">Не просто знать путь, а действительно идти по нему.</p>
     </div>
@@ -1094,6 +1115,12 @@ body{font-weight:500}
         <li><span class="n">07</span>Практические задания для ежедневной жизни</li>
         <li class="hl"><span class="n">08</span>Праздничная атмосфера предрождественской Вены</li>
       </ul>
+      <div class="live live-4" aria-label="Фото с наших прошлых мероприятий">
+        <figure><img src="img/live-lecture.jpg" alt="Занятие в большом зале: участники слушают учителей" loading="lazy" style="object-position:50% 55%"></figure>
+        <figure><img src="img/live-yoga.jpg" alt="Утренняя йога: участники выполняют упражнение на ковриках" loading="lazy" style="object-position:55% 55%"></figure>
+        <figure><img src="img/live-group.jpg" alt="Общее фото участников прошлого мероприятия в Вене" loading="lazy" style="object-position:50% 70%"></figure>
+        <figure><img src="img/live-selfie.jpg" alt="Селфи в зале во время практики" loading="lazy" style="object-position:45% 62%"></figure>
+      </div>
       <p class="note" style="margin-top:18px">Подробное расписание будет опубликовано дополнительно.</p>
     </div>
   </section>
@@ -1407,6 +1434,10 @@ body{font-weight:500}
     new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){enter(armed);armed=false;}else{armed=true;if(leave)leave();}});},{threshold:thr}).observe(el);
   }
 
+
+
+  /* live photo strips */
+  document.querySelectorAll('.live').forEach(function(l){if(reduce||!hasIO){l.classList.add('in');return;}onView(l,.2,function(){l.classList.add('in');});});
 
   /* road to enlightenment */
   (function(){
