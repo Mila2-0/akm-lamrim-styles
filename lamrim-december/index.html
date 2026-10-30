@@ -369,6 +369,15 @@ body{font-weight:500}
 .fmt-grid li:last-child .fi svg{filter:drop-shadow(0 0 10px rgba(243,217,145,.75))}
 @media (prefers-reduced-motion: reduce){.fmt-grid .fi{opacity:1;transform:none;transition:none}.fmt-grid .fi svg,.fi-tw,.fi-l{animation:none}}
 
+.prac-grid{align-items:stretch!important}
+.prac-left{display:flex;flex-direction:column;gap:22px;min-width:0}
+.prac-photo{position:relative;flex:1;min-height:240px;border-radius:20px;overflow:hidden;border:1px solid rgba(243,217,145,.28);box-shadow:0 24px 50px -30px rgba(0,0,0,.7);margin:0}
+.prac-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 32%;transition:transform 1.2s ease}
+.prac-photo:hover img{transform:scale(1.05)}
+.live-1{grid-template-columns:1fr}
+.live-1 figure{height:340px}
+@media (max-width:760px){.prac-photo{min-height:260px}.live-1 figure{height:210px}}
+
 /* december */
 .shower{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
 .fall{position:absolute;top:-24px;width:var(--sz);height:var(--sz);background:var(--gold);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);opacity:0;animation:fall var(--dur) cubic-bezier(.35,.1,.6,1) forwards;filter:drop-shadow(0 0 4px rgba(243,217,145,.9))}
@@ -927,8 +936,11 @@ body{font-weight:500}
         <div><p class="eyebrow">От знаний к опыту</p><h2>Знания меняют жизнь, когда становятся <span class="grad">практикой</span></h2></div>
       </div>
       <div class="prac-grid">
-        <div class="prose">
-          <p style="font-size:18px">Можно услышать множество прекрасных учений и даже хорошо их понимать. Но настоящее изменение начинается тогда, когда знания входят в нашу ежедневную жизнь. Именно регулярная практика помогает:</p>
+        <div class="prac-left">
+          <div class="prose">
+            <p style="font-size:18px">Можно услышать множество прекрасных учений и даже хорошо их понимать. Но настоящее изменение начинается тогда, когда знания входят в нашу ежедневную жизнь. Именно регулярная практика помогает:</p>
+          </div>
+          <figure class="prac-photo"><img src="img/live-medit.jpg" alt="Участники в медитации на ковриках" loading="lazy"></figure>
         </div>
         <ul class="prac-list">
           <li>замечать привычные реакции своего ума;</li>
@@ -939,8 +951,7 @@ body{font-weight:500}
           <li>шаг за шагом становиться тем человеком, которым мы хотим быть.</li>
         </ul>
       </div>
-      <div class="live live-2" aria-label="Фото с наших прошлых мероприятий">
-        <figure><img src="img/live-medit.jpg" alt="Участники в медитации на ковриках" loading="lazy" style="object-position:40% 30%"></figure>
+      <div class="live live-1" aria-label="Фото с наших прошлых мероприятий">
         <figure><img src="img/live-hall.jpg" alt="Большой зал: участники медитируют на ковриках" loading="lazy" style="object-position:50% 70%"></figure>
       </div>
       <p class="intro" style="margin-top:28px">Поэтому новый цикл задуман не только как серия лекций. Учителя хотят соединить знания с медитацией, обсуждением, самостоятельной практикой и в дальнейшем — с ретритами.</p>
