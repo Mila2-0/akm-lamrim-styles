@@ -742,6 +742,28 @@ body{font-weight:500}
 .wed-facts li b{font-family:var(--display);font-size:clamp(20px,2vw,26px);color:var(--gold-l);white-space:nowrap}
 .wed-card .btn{align-self:flex-start}
 @media (max-width:860px){.wed-grid{grid-template-columns:1fr}.wed-card .btn{align-self:stretch}}
+
+/* ===== первый экран v9: «Медитация Pro» как название ===== */
+.hero h1.pro-name{font-family:var(--display);font-weight:800;font-size:clamp(48px,6.2vw,96px);line-height:.98;letter-spacing:-.035em;margin:0;max-width:none;color:var(--gold-l);text-shadow:none}
+.pro-name .grad{display:inline-block;padding-bottom:.06em;filter:drop-shadow(0 6px 30px rgba(26,16,18,.55))}
+.hero .pro{margin-top:-2px}
+.hero .pro-title{font-size:clamp(22px,2.2vw,34px)!important;max-width:17em!important;margin-top:6px}
+.pro-note{max-width:34rem;color:#fff;font-size:clamp(16px,1.3vw,18.5px);font-weight:600;line-height:1.45;text-shadow:0 2px 14px rgba(26,16,18,.8)}
+.series{font-size:14.5px;font-weight:600;line-height:1.45;color:var(--text-lm);letter-spacing:.01em;text-shadow:0 2px 10px rgba(26,16,18,.7)}
+.series i{font-style:normal;color:var(--gold);margin:0 4px}
+.series span{color:var(--gold-l)}
+@media (max-width:1100px){
+  .hero h1.pro-name{grid-row:1;text-align:center;justify-self:center;font-size:clamp(38px,11.2vw,76px)}
+  .hero .pro{grid-row:2;margin:4px 0 0}
+  .hero .pro-title{grid-row:3;font-size:clamp(20px,5.6vw,32px)!important;margin-top:10px}
+  .pro-note{grid-row:4;text-align:center;justify-self:center;margin-top:10px}
+  .series{grid-row:5;text-align:center;justify-self:center;margin-top:8px}
+  .series i{display:none}.series span{display:block}
+  .hero-people{grid-row:6 / span 2!important}
+  .hero .ctas{grid-row:7!important}
+  .hero .facts{grid-row:8!important}
+  .hero .pro-name,.pro-note,.series{position:relative;z-index:2}
+}
 </style>
 </head>
 <body>
@@ -789,10 +811,11 @@ body{font-weight:500}
     <div class="hero-bg"><img src="img/rainbow-hd.jpg" width="1400" height="1050" alt="" fetchpriority="high"></div>
     <div class="hero-in">
       <div class="hero-text">
-        <div class="tib" lang="bo" aria-hidden="true" data-text="ལམ་རིམ།"><span>ལ</span><span>མ</span><span>་</span><span>རི</span><span>མ</span><span>།</span></div>
-        <h1>Практики системы семян для ежедневной жизни <span class="with-t">с Питером и Марией Мёртл</span></h1>
-        <p class="pro"><b>Медитация Pro</b><span class="hand">начало нового цикла учений<i class="pencil" aria-hidden="true"></i></span></p>
+        <h1 class="pro-name"><span class="grad">Медитация Pro</span></h1>
+        <p class="pro"><span class="hand">начало нового цикла учений<i class="pencil" aria-hidden="true"></i></span></p>
         <p class="pro-title">Как увидеть <span class="grad">пустоту напрямую</span> с помощью специализированных техник медитации</p>
+        <p class="pro-note">Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома</p>
+        <p class="series">Практики системы семян для ежедневной жизни <i aria-hidden="true">·</i> <span>с Питером и Марией Мёртл</span></p>
         <div class="ctas">
           <a class="btn btn-gold" href="#tickets">Забронировать место в Вене <span class="ar" aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="https://t.me/ACI_bbot?start=c1793352146599-ds" target="_blank" rel="noopener">Участвовать онлайн бесплатно</a>
