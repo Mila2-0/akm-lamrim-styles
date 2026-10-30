@@ -720,6 +720,18 @@ body{font-weight:500}
 .c-main .dots b{width:8px;height:8px;border-radius:50%;background:rgba(247,239,230,.5);transition:all .4s ease}
 .c-main .dots b.on{width:24px;border-radius:99px;background:var(--gold-l)}
 @media (prefers-reduced-motion: reduce){.c-main .glow,.sparkles i{animation:none}.sparkles i{opacity:.7}}
+
+/* ===== духовная свадьба ===== */
+.wed-photo{margin:0 auto clamp(26px,3.4vw,40px);max-width:60rem;position:relative}
+.wed-photo::before{content:"";position:absolute;left:8%;right:8%;top:14%;bottom:0;border-radius:50% 50% 0 0;background:radial-gradient(ellipse at 50% 60%,rgba(243,217,145,.34) 0%,rgba(221,174,53,.12) 45%,transparent 72%);filter:blur(10px);z-index:0}
+.wed-photo img{position:relative;z-index:1;display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%),linear-gradient(180deg,#000 82%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%),linear-gradient(180deg,#000 82%,transparent 100%);mask-composite:intersect}
+.wed-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(18px,2.4vw,30px);align-items:stretch}
+.wed-card{display:flex;flex-direction:column;gap:22px;justify-content:center}
+.wed-facts{display:grid;gap:12px;list-style:none;padding:0;margin:0}
+.wed-facts li{display:flex;gap:12px;align-items:baseline;color:var(--text-l);font-weight:600;font-size:16px;line-height:1.4;padding-bottom:12px;border-bottom:1px solid var(--line-l)}
+.wed-facts li b{font-family:var(--display);font-size:clamp(20px,2vw,26px);color:var(--gold-l);white-space:nowrap}
+.wed-card .btn{align-self:flex-start}
+@media (max-width:860px){.wed-grid{grid-template-columns:1fr}.wed-card .btn{align-self:stretch}}
 </style>
 </head>
 <body>
@@ -1264,6 +1276,37 @@ body{font-weight:500}
       </div>
     </div>
   </section>
+
+  <!-- ДУХОВНАЯ СВАДЬБА -->
+  <div class="mega-wrap">
+    <section class="mega burgm sec" id="wedding">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><p class="eyebrow">Особая церемония · 19–21 декабря</p><h2>Духовная свадьба в <span class="grad">тибетской традиции</span></h2></div>
+          <p>Снова в Вене, в рамках мероприятия «Практики системы семян для ежедневной жизни»</p>
+        </div>
+        <figure class="wed-photo"><img src="img/wedding-cut.webp" width="1080" height="665" alt="Пары и учителя на духовной свадьбе в Вене" loading="lazy"></figure>
+        <div class="wed-grid">
+          <div class="card card-k">
+            <div class="prose">
+              <p class="big">Духовные свадьбы в нашем сообществе становятся уже красивой традицией ❤️</p>
+              <p>Это особая церемония для пар, которые хотят не просто быть вместе, а идти вместе по духовному пути — поддерживать развитие друг друга и придать своему союзу ещё большую глубину и смысл.</p>
+              <p>После прекрасной церемонии на нашем прошлом мероприятии в Вене мы рады сообщить: в декабре такая возможность будет снова! Наши учителя <b>Питер и Мария Мёртл</b> проведут духовную свадебную церемонию в тибетской традиции.</p>
+              <p>Это возможность сделать важный шаг вместе — посвятить свой союз не только любви друг к другу, но и общему духовному пути, развитию и служению другим 🙏</p>
+            </div>
+          </div>
+          <div class="card card-d wed-card">
+            <ul class="wed-facts">
+              <li><b>5 мест</b><span>для пар</span></li>
+              <li><b>1&nbsp;500&nbsp;€</b><span>стоимость участия пары</span></li>
+            </ul>
+            <p>Если вы чувствуете, что хотите пройти эту особенную церемонию вместе со своим партнёром, заполните анкету.</p>
+            <a class="btn btn-gold" href="https://forms.gle/zJ4MgKmHxe1oFP5L7" target="_blank" rel="noopener">Подать заявку <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- МЕСТО -->
   <div class="mega-wrap">
