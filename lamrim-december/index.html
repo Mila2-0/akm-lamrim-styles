@@ -764,6 +764,16 @@ body{font-weight:500}
   .hero .facts{grid-row:8!important}
   .hero .pro-name,.pro-note,.series{position:relative;z-index:2}
 }
+
+/* ===== бегущая строка под первым экраном ===== */
+.marquee{position:relative;z-index:4;overflow:hidden;margin:clamp(6px,1vw,14px) 0;padding:16px 0;background:linear-gradient(100deg,var(--burg) 0%,#4a1720 50%,var(--burg) 100%);border-block:1px solid rgba(243,217,145,.35);box-shadow:0 18px 40px -24px rgba(0,0,0,.7)}
+.mq-track{display:flex;width:max-content;animation:mqMove 48s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-g{display:flex;align-items:center;flex-shrink:0}
+.mq-g span{font-family:var(--display);font-weight:700;font-size:clamp(16px,1.6vw,22px);letter-spacing:-.01em;color:var(--cream);white-space:nowrap;padding:0 28px}
+.mq-g i{font-style:normal;color:var(--gold);font-size:clamp(14px,1.3vw,18px)}
+@keyframes mqMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}.marquee{text-align:center}}
 </style>
 </head>
 <body>
@@ -814,7 +824,6 @@ body{font-weight:500}
         <h1 class="pro-name"><span class="grad">Медитация Pro</span></h1>
         <p class="pro"><span class="hand">начало нового цикла учений<i class="pencil" aria-hidden="true"></i></span></p>
         <p class="pro-title">Как увидеть <span class="grad">пустоту напрямую</span> с помощью специализированных техник медитации</p>
-        <p class="pro-note">Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома</p>
         <p class="series">Практики системы семян для ежедневной жизни <i aria-hidden="true">·</i> <span>с Питером и Марией Мёртл</span></p>
         <div class="ctas">
           <a class="btn btn-gold" href="#tickets">Забронировать место в Вене <span class="ar" aria-hidden="true">→</span></a>
@@ -825,6 +834,11 @@ body{font-weight:500}
     </div>
     <div class="hero-people"><img src="img/teachers-hat-cut.png" width="720" height="975" alt="Питер и Мария Мёртл"></div>
   </section>
+
+  <!-- БЕГУЩАЯ СТРОКА -->
+  <div class="marquee" role="note" aria-label="Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома">
+    <div class="mq-track"><div class="mq-g" aria-hidden="true"><span>Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома</span><i aria-hidden="true">✦</i><span>Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома</span><i aria-hidden="true">✦</i><span>Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома</span><i aria-hidden="true">✦</i></div><div class="mq-g" aria-hidden="true"><span>Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома</span><i aria-hidden="true">✦</i><span>Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома</span><i aria-hidden="true">✦</i><span>Три дня лекций и медитаций с учителями — а затем вы продолжаете практику дома</span><i aria-hidden="true">✦</i></div></div>
+  </div>
 
   <!-- ТЕМА -->
   <div class="mega-wrap">
