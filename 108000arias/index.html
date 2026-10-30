@@ -363,6 +363,28 @@ b,strong{font-weight:800}
 .ftr-in a{color:var(--gold-l)}
 .ftr .brand img{width:52px;height:52px}
 
+
+/* support widget */
+.sup{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.sup-btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 20px 0 8px;border-radius:999px;border:1px solid rgba(243,217,145,.45);background:rgba(26,16,18,.9);color:var(--text-l);font-family:var(--sans);font-weight:800;font-size:15px;cursor:pointer;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 40px -16px rgba(0,0,0,.8);transition:transform .25s ease,border-color .25s ease}
+.sup-btn:hover{transform:translateY(-2px);border-color:var(--gold)}
+.sup-btn .tg{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#5ab8ee,#2a9bd8);color:#fff;position:relative}
+.sup-btn .tg::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(90,184,238,.6);animation:supPing 2.4s ease-out infinite}
+@keyframes supPing{0%{transform:scale(.9);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.sup-btn .tg svg{width:20px;height:20px;margin-left:-2px}
+.sup-card{width:min(320px,calc(100vw - 32px));border-radius:24px;padding:22px 22px 20px;background:rgba(36,22,26,.97);border:1px solid var(--line-l);box-shadow:0 30px 60px -20px rgba(0,0,0,.85);display:grid;gap:10px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.sup-card[hidden]{display:none}
+.sup-card h3{font-size:18px;color:var(--white)}
+.sup-card p{font-size:14.5px;line-height:1.5;color:var(--text-lm)}
+.sup-card .who{display:flex;align-items:center;gap:12px;margin-top:4px;padding:10px 12px;border-radius:16px;background:rgba(247,239,230,.06)}
+.sup-card .who b{display:block;font-size:15px;color:var(--text-l)}
+.sup-card .who span{font-size:13px;color:var(--text-lm)}
+.sup-card .av{flex-shrink:0;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--ink);font-family:var(--display);font-weight:700;font-size:15px}
+.sup-card .btn{width:100%;margin-top:6px;min-height:48px;font-size:15px;animation:none}
+.sup-x{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(247,239,230,.08);color:var(--text-lm);font-size:18px;cursor:pointer}
+.sup-card{position:relative}
+@media (max-width:640px){.sup-btn{min-height:46px;padding:0 16px 0 5px;font-size:14px}.sup-btn .tg{width:36px;height:36px}}
+
 @media (max-width:1100px){
   .hero-in{grid-template-columns:1fr;padding-top:104px;justify-items:center;text-align:center}
   .hero-text{justify-items:center}
@@ -923,11 +945,31 @@ b,strong{font-weight:800}
   </div>
 </footer>
 
+<div class="sup">
+  <div class="sup-card" id="supCard" role="dialog" aria-labelledby="supTitle" hidden>
+    <button class="sup-x" id="supX" aria-label="Закрыть">×</button>
+    <h3 id="supTitle">Техподдержка</h3>
+    <p>Остались вопросы о проекте или оплате? Напишите нам в Телеграм — поможем.</p>
+    <div class="who"><span class="av">А</span><div><b>Ангелина Ярикова</b><span>@AngelinaYarikova</span></div></div>
+    <a class="btn btn-gold" href="https://t.me/AngelinaYarikova" target="_blank" rel="noopener">Написать в Телеграм <span class="ar">→</span></a>
+  </div>
+  <button class="sup-btn" id="supBtn" aria-expanded="false" aria-controls="supCard">
+    <span class="tg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.3L2.9 11.4c-1.3.5-1.2 1.3-.2 1.6l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.4zM8.9 14.2l9.4-5.9c.4-.3.8-.1.5.2l-7.8 7.1-.3 3.3z"/></svg></span>
+    <span class="lbl">Техподдержка</span>
+  </button>
+</div>
+
 <script>
 (function(){
   var btn=document.getElementById('menuBtn'),nav=document.getElementById('mnav');
   btn.addEventListener('click',function(){var o=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!o));nav.hidden=o;});
   nav.addEventListener('click',function(e){if(e.target.closest('a')){btn.setAttribute('aria-expanded','false');nav.hidden=true;}});
+
+  var sb=document.getElementById('supBtn'),sc=document.getElementById('supCard');
+  function supSet(o){sc.hidden=!o;sb.setAttribute('aria-expanded',String(o));}
+  sb.addEventListener('click',function(){supSet(sc.hidden);});
+  document.getElementById('supX').addEventListener('click',function(){supSet(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')supSet(false);});
 
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
