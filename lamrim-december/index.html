@@ -722,9 +722,19 @@ body{font-weight:500}
 @media (prefers-reduced-motion: reduce){.c-main .glow,.sparkles i{animation:none}.sparkles i{opacity:.7}}
 
 /* ===== духовная свадьба ===== */
-.wed-photo{margin:0 auto clamp(26px,3.4vw,40px);max-width:60rem;position:relative}
-.wed-photo::before{content:"";position:absolute;left:8%;right:8%;top:14%;bottom:0;border-radius:50% 50% 0 0;background:radial-gradient(ellipse at 50% 60%,rgba(243,217,145,.34) 0%,rgba(221,174,53,.12) 45%,transparent 72%);filter:blur(10px);z-index:0}
-.wed-photo img{position:relative;z-index:1;display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%),linear-gradient(180deg,#000 82%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%),linear-gradient(180deg,#000 82%,transparent 100%);mask-composite:intersect}
+.wed-slider{position:relative;max-width:46rem;margin:0 auto clamp(26px,3.4vw,40px);aspect-ratio:3/2;border-radius:var(--r-card);overflow:hidden;background:var(--ink);box-shadow:0 40px 80px -40px rgba(221,174,53,.45),0 0 0 1px rgba(243,217,145,.3);touch-action:pan-y}
+.wed-slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .9s ease}
+.wed-slide.on{opacity:1}
+.wed-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.wed-slide.tall .bg{filter:blur(22px) brightness(.55);transform:scale(1.15)}
+.wed-slide.tall .fg{object-fit:contain}
+.wed-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(243,217,145,.45);background:rgba(26,16,18,.45);color:var(--gold-l);font-size:20px;line-height:1;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .25s ease}
+.wed-nav:hover{background:rgba(26,16,18,.75)}
+.wed-nav.prev{left:12px}.wed-nav.next{right:12px}
+.wed-dots{position:absolute;left:0;right:0;bottom:12px;z-index:2;display:flex;justify-content:center;gap:8px}
+.wed-dots button{width:9px;height:9px;padding:0;border-radius:999px;border:0;background:rgba(247,239,230,.5);cursor:pointer;transition:width .3s ease,background .3s ease}
+.wed-dots button.on{width:26px;background:var(--gold-l)}
+@media (max-width:640px){.wed-slider{aspect-ratio:4/3}.wed-nav{width:38px;height:38px;font-size:17px}}
 .wed-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(18px,2.4vw,30px);align-items:stretch}
 .wed-card{display:flex;flex-direction:column;gap:22px;justify-content:center}
 .wed-facts{display:grid;gap:12px;list-style:none;padding:0;margin:0}
@@ -1285,7 +1295,20 @@ body{font-weight:500}
           <div><p class="eyebrow">Особая церемония · 19–21 декабря</p><h2>Духовная свадьба в <span class="grad">тибетской традиции</span></h2></div>
           <p>Снова в Вене, в рамках мероприятия «Практики системы семян для ежедневной жизни»</p>
         </div>
-        <figure class="wed-photo"><img src="img/wedding-cut.webp" width="1080" height="665" alt="Пары и учителя на духовной свадьбе в Вене" loading="lazy"></figure>
+        <div class="wed-slider" data-wed aria-roledescription="carousel" aria-label="Фото с прошлой духовной свадьбы">
+          <figure class="wed-slide on"><img src="img/wed/w1.webp" alt="Пары и учителя после духовной свадьбы в Вене"></figure>
+          <figure class="wed-slide"><img src="img/wed/w2.webp" alt="Радостные пары и учителя после церемонии" loading="lazy"></figure>
+          <figure class="wed-slide"><img src="img/wed/w3.webp" alt="Церемония духовной свадьбы" loading="lazy"></figure>
+          <figure class="wed-slide tall"><img class="bg" src="img/wed/w4.webp" alt="" aria-hidden="true" loading="lazy"><img class="fg" src="img/wed/w4.webp" alt="Пара идёт под аркой из роз" loading="lazy"></figure>
+          <figure class="wed-slide"><img src="img/wed/w5.webp" alt="Поцелуй под фатой" loading="lazy"></figure>
+          <figure class="wed-slide tall"><img class="bg" src="img/wed/w6.webp" alt="" aria-hidden="true" loading="lazy"><img class="fg" src="img/wed/w6.webp" alt="Пары на церемонии" loading="lazy"></figure>
+          <figure class="wed-slide tall"><img class="bg" src="img/wed/w7.webp" alt="" aria-hidden="true" loading="lazy"><img class="fg" src="img/wed/w7.webp" alt="Счастливая пара после церемонии" loading="lazy"></figure>
+          <figure class="wed-slide"><img src="img/wed/w8.webp" alt="Невесты перед церемонией" loading="lazy"></figure>
+          <figure class="wed-slide"><img src="img/wed/w9.webp" alt="Гости держат арку из роз" loading="lazy"></figure>
+          <button class="wed-nav prev" type="button" aria-label="Предыдущее фото">←</button>
+          <button class="wed-nav next" type="button" aria-label="Следующее фото">→</button>
+          <div class="wed-dots"></div>
+        </div>
         <div class="wed-grid">
           <div class="card card-k">
             <div class="prose">
@@ -1594,5 +1617,20 @@ body{font-weight:500}
   if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   setInterval(function(){sl[i].classList.remove('on');dt[i]&&dt[i].classList.remove('on');i=(i+1)%sl.length;sl[i].classList.add('on');dt[i]&&dt[i].classList.add('on');},4500);})();
   </script>
+<script>
+(function(){var s=document.querySelector('[data-wed]');if(!s)return;var sl=[].slice.call(s.querySelectorAll('.wed-slide')),d=s.querySelector('.wed-dots'),i=0,tm=null,
+rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+sl.forEach(function(_,k){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Фото '+(k+1));b.onclick=function(){go(k);rs()};d.appendChild(b)});
+var db=[].slice.call(d.children);
+function go(n){i=(n+sl.length)%sl.length;sl.forEach(function(e,k){e.classList.toggle('on',k===i)});db.forEach(function(e,k){e.classList.toggle('on',k===i)});
+var nx=sl[(i+1)%sl.length];nx.querySelectorAll('img').forEach(function(m){m.loading='eager'})}
+function st(){if(rm)return;clearInterval(tm);tm=setInterval(function(){go(i+1)},4500)}
+function rs(){st()}
+s.querySelector('.prev').onclick=function(){go(i-1);rs()};s.querySelector('.next').onclick=function(){go(i+1);rs()};
+s.addEventListener('mouseenter',function(){clearInterval(tm)});s.addEventListener('mouseleave',st);
+var x0=null;s.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+s.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));rs()}x0=null});
+go(0);st()})();
+</script>
 </body>
 </html>
