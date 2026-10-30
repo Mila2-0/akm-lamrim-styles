@@ -307,10 +307,9 @@ body{font-weight:500}
 .road{position:relative;margin-top:16px;border-radius:var(--r-card);background:linear-gradient(160deg,var(--white) 0%,#f8efe2 100%);box-shadow:0 30px 60px -40px rgba(105,35,45,.35);padding:clamp(18px,3vw,34px);overflow:hidden}
 .road svg{display:block;width:100%;height:auto;overflow:visible}
 .road .rv{display:none}
-.road .base{fill:none;stroke:var(--cream-2);stroke-width:26;stroke-linecap:round}
+.road .base{fill:none;stroke:var(--cream-2);stroke-width:22;stroke-linecap:round}
 .road .dash{fill:none;stroke:#fffdf9;stroke-width:2.5;stroke-dasharray:10 12;stroke-linecap:round}
-.road .lit{fill:none;stroke:url(#roadGold);stroke-width:8;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(221,174,53,.75))}
-.road .rv .lit{stroke:url(#roadGoldV)}
+.road .lit{fill:none;stroke-width:8;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(221,174,53,.75))}
 .road .pt circle.c{fill:#fffdf9;stroke:var(--cream-2);stroke-width:4;transition:fill .5s,stroke .5s,r .5s}
 .road .pt circle.h{fill:rgba(221,174,53,.35);opacity:0;transform-box:fill-box;transform-origin:center;transition:opacity .5s}
 .road .pt.on circle.c{fill:var(--gold);stroke:#fffdf9}
@@ -320,12 +319,15 @@ body{font-weight:500}
 @keyframes ptPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.7);opacity:.15}}
 .road text{font-family:var(--sans);font-size:15px;font-weight:600;fill:var(--text-dm)}
 .road text .b{font-family:var(--display);font-weight:700;font-size:17px;fill:var(--text-d)}
-.road text.end-t .b{fill:var(--burg)}
+.road text.end-t .b{fill:var(--burg);font-size:19px}
+.road .road-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-bottom:10px}
+.road .road-note{font-size:14.5px;color:var(--text-dm)!important;margin:0}
+.road .pt.start text{}
+.road .here{font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.06em;fill:var(--burg)}
 .road .lbl{opacity:0;transition:opacity .6s}
 .road .lbl.on{opacity:1}
 .road .sun .rays{transform-box:fill-box;transform-origin:center;animation:rays 18s linear infinite;opacity:.25;transition:opacity .8s}
-.road .sun .core{fill:url(#sunGrad);opacity:.35;transition:opacity .8s}
-.road .rv .sun .core{fill:url(#sunGradV)}
+.road .sun .core{opacity:.35;transition:opacity .8s}
 .road .sun.on .rays{opacity:1}
 .road .sun.on .core{opacity:1;filter:drop-shadow(0 0 18px rgba(221,174,53,.95))}
 @keyframes rays{to{transform:rotate(360deg)}}
@@ -335,19 +337,37 @@ body{font-weight:500}
 /* live photo strips */
 .live{display:grid;gap:12px;margin-top:28px}
 .live-2{grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr)}
-.live-4{grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr) minmax(0,1.6fr) minmax(0,.8fr);margin-top:22px}
+.live-4{grid-template-columns:minmax(0,1.6fr) minmax(0,.9fr) minmax(0,.9fr);margin-top:22px}
+.live figure.full{grid-column:1/-1;height:auto}
+.live figure.full img{height:auto;display:block}
 .live figure{position:relative;height:240px;border-radius:20px;overflow:hidden;border:1px solid rgba(243,217,145,.28);box-shadow:0 24px 50px -30px rgba(0,0,0,.7);opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
 .live.in figure{opacity:1;transform:none}
 .live.in figure:nth-child(2){transition-delay:.12s}.live.in figure:nth-child(3){transition-delay:.24s}.live.in figure:nth-child(4){transition-delay:.36s}
+.live figure.full:hover img{transform:none}
 .live img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
 .live figure:hover img{transform:scale(1.05)}
 .live figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,16,18,.35));pointer-events:none}
 @media (max-width:760px){
   .live-2{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)}
-  .live-4{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+  .live-4{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .live-4 figure:first-child{grid-column:1/-1}
   .live figure{height:190px}
 }
 @media (prefers-reduced-motion: reduce){.live figure{opacity:1;transform:none;transition:none}}
+
+/* format icons */
+.fmt-grid li{position:relative}
+@media (min-width:761px){.fmt-grid{row-gap:28px!important;margin-top:8px}.fmt-grid .fi{top:-20px!important;right:14px!important;margin-top:0!important;width:42px!important;height:42px!important}.fmt-grid .fi svg{width:42px;height:42px}}
+@media (max-width:760px){.fmt-grid li{padding-right:62px!important}}
+.fmt-grid .fi{position:absolute;right:14px;top:50%;width:40px;height:40px;margin-top:-20px;opacity:0;transform:scale(.2) rotate(-25deg);transition:opacity .5s ease var(--d),transform .7s cubic-bezier(.34,1.56,.64,1) var(--d)}
+.fmt-grid .fi svg{display:block;width:40px;height:40px;overflow:visible;filter:drop-shadow(0 4px 10px rgba(221,174,53,.45));animation:fiFloat 3.4s ease-in-out infinite;animation-delay:var(--d)}
+.fmt-grid.in .fi{opacity:1;transform:none}
+@keyframes fiFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-4px) rotate(3deg)}}
+.fi-tw{animation:fiTw 2.2s ease-in-out infinite}
+@keyframes fiTw{0%,100%{opacity:.25}50%{opacity:1}}
+.fi-l{animation:fiTw 1.6s ease-in-out infinite}.fi-l.l2{animation-delay:.5s}.fi-l.l3{animation-delay:1s}
+.fmt-grid li:last-child .fi svg{filter:drop-shadow(0 0 10px rgba(243,217,145,.75))}
+@media (prefers-reduced-motion: reduce){.fmt-grid .fi{opacity:1;transform:none;transition:none}.fmt-grid .fi svg,.fi-tw,.fi-l{animation:none}}
 
 /* december */
 .shower{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
@@ -695,7 +715,6 @@ body{font-weight:500}
   <div class="hdr-in">
     <a class="brand" href="#top"><img src="img/logo-mark.png" width="160" height="120" alt="Академия Классической Мудрости"><span class="brand-txt"><b>Практики системы семян</b><span>19–21 декабря · Вена + онлайн</span></span></a>
     <nav class="dnav" aria-label="Разделы">
-      <a href="#reveal">Тема</a>
       <a href="#lamrim">Почему Ламрим</a>
       <a href="#start">Медитация Pro</a>
       <a href="#who">Для кого</a>
@@ -714,7 +733,6 @@ body{font-weight:500}
   </div>
 </header>
 <nav class="mnav" id="mnav" aria-label="Меню" hidden>
-  <a href="#reveal">Тема</a>
   <a href="#lamrim">Почему Ламрим</a>
   <a href="#start">Медитация Pro</a>
   <a href="#who">Для кого</a>
@@ -1001,22 +1019,9 @@ body{font-weight:500}
           <li><span class="n">5</span>получите практики, которые сможете включить в ежедневную жизнь.</li>
         </ul>
         <div class="road" id="road">
-          <svg class="rh" viewBox="0 0 1200 320" role="img" aria-label="Путь: первый этап 19–21 декабря, следующие этапы цикла Ламрима, просветление">
-            <defs>
-              <linearGradient id="roadGold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#69232d"/><stop offset=".35" stop-color="#ddae35"/><stop offset="1" stop-color="#f3d991"/></linearGradient>
-              <radialGradient id="sunGrad"><stop offset="0" stop-color="#fffbe9"/><stop offset=".45" stop-color="#f3d991"/><stop offset="1" stop-color="#ddae35"/></radialGradient>
-            </defs>
-            <path class="base" d="M70 230 C 200 250 230 120 360 135 S 540 260 690 210 S 880 70 1010 95 S 1090 85 1120 80"/><path class="dash" d="M70 230 C 200 250 230 120 360 135 S 540 260 690 210 S 880 70 1010 95 S 1090 85 1120 80"/><path class="lit" d="M70 230 C 200 250 230 120 360 135 S 540 260 690 210 S 880 70 1010 95 S 1090 85 1120 80"/>
-            <g class="marks"></g>
-          </svg>
-          <svg class="rv" viewBox="0 0 360 660" role="img" aria-label="Путь: первый этап 19–21 декабря, следующие этапы цикла Ламрима, просветление">
-            <defs>
-              <linearGradient id="roadGoldV" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#69232d"/><stop offset=".35" stop-color="#ddae35"/><stop offset="1" stop-color="#f3d991"/></linearGradient>
-              <radialGradient id="sunGradV"><stop offset="0" stop-color="#fffbe9"/><stop offset=".45" stop-color="#f3d991"/><stop offset="1" stop-color="#ddae35"/></radialGradient>
-            </defs>
-            <path class="base" d="M60 90 C 260 90 310 190 200 245 S 40 340 130 410 S 330 470 280 570"/><path class="dash" d="M60 90 C 260 90 310 190 200 245 S 40 340 130 410 S 330 470 280 570"/><path class="lit" d="M60 90 C 260 90 310 190 200 245 S 40 340 130 410 S 330 470 280 570"/>
-            <g class="marks"></g>
-          </svg>
+          <div class="road-head"><p class="eyebrow">Шаги на пути</p><p class="road-note">Темы Ламрима в том порядке, в котором этот цикл преподавал Геше Майкл</p></div>
+          <svg class="rh" viewBox="0 0 1200 700" role="img" aria-label="Шаги на пути Ламрима: шаматха и мудрость, подготовка к медитации, духовный учитель, непостоянство и смерть, прибежище, закон кармы, колесо жизни, бодхичитта, обмен себя на других, шесть совершенств, полное совершенство"></svg>
+          <svg class="rv" viewBox="0 0 360 1060" role="img" aria-label="Шаги на пути Ламрима: шаматха и мудрость, подготовка к медитации, духовный учитель, непостоянство и смерть, прибежище, закон кармы, колесо жизни, бодхичитта, обмен себя на других, шесть совершенств, полное совершенство"></svg>
         </div>
       </div>
     </section>
@@ -1105,21 +1110,22 @@ body{font-weight:500}
       <div class="sec-head">
         <div><p class="eyebrow">Что вас ждёт</p><h2>Три дня <span class="grad">глубокого погружения</span></h2></div>
       </div>
-      <ul class="fmt-grid">
-        <li class="hl"><span class="n">01</span>Занятия с Питером и Марией Мёртл</li>
-        <li class="hl"><span class="n">02</span>Специализированные техники медитации, чтобы увидеть пустоту напрямую</li>
-        <li><span class="n">03</span>Практические объяснения и ответы на вопросы</li>
-        <li><span class="n">04</span>Утренняя йога</li>
-        <li><span class="n">05</span>Группы мудрости</li>
-        <li><span class="n">06</span>Общение с единомышленниками</li>
-        <li><span class="n">07</span>Практические задания для ежедневной жизни</li>
-        <li class="hl"><span class="n">08</span>Праздничная атмосфера предрождественской Вены</li>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="fiGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4d779"/><stop offset=".55" stop-color="#ddae35"/><stop offset="1" stop-color="#a87a14"/></linearGradient></defs></svg>
+      <ul class="fmt-grid" id="fmt-grid">
+        <li class="hl"><span class="n">01</span>Занятия с Питером и Марией Мёртл<span class="fi" style="--d:0.00s" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M7 15 L13 7 H27 L33 15 L20 34 Z" fill="url(#fiGold)" stroke="#8a6512" stroke-width="1.2" stroke-linejoin="round"/><path d="M7 15 H33 M13 7 L17 15 L20 34 M27 7 L23 15 L20 34 M17 15 L20 7 L23 15" fill="none" stroke="#8a6512" stroke-width="1" stroke-linejoin="round" opacity=".8"/><path class="fi-tw" d="M31 3 l1 2.5 2.5 1 -2.5 1 -1 2.5 -1 -2.5 -2.5 -1 2.5 -1z" fill="#fff"/></svg></span></li>
+        <li class="hl"><span class="n">02</span>Специализированные техники медитации, чтобы увидеть пустоту напрямую<span class="fi" style="--d:0.12s" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="11" r="8.5" fill="none" stroke="#f3d991" stroke-width="1.2" opacity=".55"/><circle cx="20" cy="11" r="4.2" fill="url(#fiGold)"/><path d="M12.5 28 Q13 18 20 17.5 Q27 18 27.5 28 Z" fill="url(#fiGold)"/><ellipse cx="20" cy="30" rx="12.5" ry="4.2" fill="url(#fiGold)"/><circle class="fi-tw" cx="20" cy="2.5" r="1.4" fill="#fff"/></svg></span></li>
+        <li><span class="n">03</span>Практические объяснения и ответы на вопросы<span class="fi" style="--d:0.24s" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M8 8 H32 a3 3 0 0 1 3 3 V25 a3 3 0 0 1 -3 3 H18 L11 34 V28 H8 a3 3 0 0 1 -3 -3 V11 a3 3 0 0 1 3 -3 Z" fill="none" stroke="#f3d991" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 14.5 a3.5 3.5 0 1 1 5 3.2 c-1.1 .6 -1.5 1.3 -1.5 2.6" fill="none" stroke="#f3d991" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="23.8" r="1.3" fill="#f3d991"/></svg></span></li>
+        <li><span class="n">04</span>Утренняя йога<span class="fi" style="--d:0.36s" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="9" r="3.2" fill="url(#fiGold)"/><path d="M13 3 L20 14 L27 3 M20 14 V25 M20 25 V36 M20 25 L13.5 28.5 L20 31" fill="none" stroke="#f3d991" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 36 H31" fill="none" stroke="#f3d991" stroke-width="1.4" stroke-linecap="round" opacity=".5"/></svg></span></li>
+        <li><span class="n">05</span>Группы мудрости<span class="fi" style="--d:0.48s" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="11" fill="none" stroke="#f3d991" stroke-width="1.2" stroke-dasharray="2 3" opacity=".7"/><circle cx="20" cy="20" r="2.6" fill="#fff" class="fi-tw"/><circle cx="20.0" cy="7.0" r="3.6" fill="url(#fiGold)"/><circle cx="31.3" cy="13.5" r="3.6" fill="url(#fiGold)"/><circle cx="31.3" cy="26.5" r="3.6" fill="url(#fiGold)"/><circle cx="20.0" cy="33.0" r="3.6" fill="url(#fiGold)"/><circle cx="8.7" cy="26.5" r="3.6" fill="url(#fiGold)"/><circle cx="8.7" cy="13.5" r="3.6" fill="url(#fiGold)"/></svg></span></li>
+        <li><span class="n">06</span>Общение с единомышленниками<span class="fi" style="--d:0.60s" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="13" cy="12" r="4" fill="url(#fiGold)"/><circle cx="27" cy="12" r="4" fill="url(#fiGold)"/><path d="M5 34 Q5 19 13 18.5 Q19 19 23 27 M35 34 Q35 19 27 18.5 Q21 19 17 27" fill="none" stroke="#f3d991" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path class="fi-tw" d="M20 9.5 c-1.2 -2.6 -5 -1.6 -3.6 1.2 L20 14.5 L23.6 10.7 c1.4 -2.8 -2.4 -3.8 -3.6 -1.2 Z" fill="#e8b9a8"/></svg></span></li>
+        <li><span class="n">07</span>Практические задания для ежедневной жизни<span class="fi" style="--d:0.72s" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M7 34 H33" fill="none" stroke="#f3d991" stroke-width="1.4" stroke-linecap="round" opacity=".55"/><ellipse cx="20" cy="33" rx="3.2" ry="2" fill="#a8780f"/><path d="M20 32 V17" fill="none" stroke="#f3d991" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 23 Q11 22.5 9.5 14 Q18 13.5 20 23 Z" fill="url(#fiGold)"/><path d="M20 18 Q21.5 8.5 31 7 Q31.5 16.5 20 18 Z" fill="url(#fiGold)"/></svg></span></li>
+        <li class="hl"><span class="n">08</span>Праздничная атмосфера предрождественской Вены<span class="fi" style="--d:0.84s" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 6 L27.5 16 H23.5 L30.5 25 H25.5 L33 34 H7 L14.5 25 H9.5 L16.5 16 H12.5 Z" fill="url(#fiGold)" stroke="#8a6512" stroke-width="1" stroke-linejoin="round"/><path d="M20 1 l1.2 2.6 2.8 .3 -2.1 1.9 .6 2.8 -2.5 -1.4 -2.5 1.4 .6 -2.8 -2.1 -1.9 2.8 -.3z" fill="#fff6d6"/><circle class="fi-l" cx="17" cy="14" r="1.3" fill="#fff"/><circle class="fi-l l2" cx="23.5" cy="20" r="1.3" fill="#e8b9a8"/><circle class="fi-l l3" cx="15" cy="24" r="1.3" fill="#fff"/><circle class="fi-l" cx="25" cy="29" r="1.3" fill="#e8b9a8"/><circle class="fi-l l2" cx="13" cy="31" r="1.3" fill="#fff"/><circle class="fi-l l3" cx="20" cy="27.5" r="1.3" fill="#fff"/></svg></span></li>
       </ul>
       <div class="live live-4" aria-label="Фото с наших прошлых мероприятий">
         <figure><img src="img/live-lecture.jpg" alt="Занятие в большом зале: участники слушают учителей" loading="lazy" style="object-position:50% 55%"></figure>
         <figure><img src="img/live-yoga.jpg" alt="Утренняя йога: участники выполняют упражнение на ковриках" loading="lazy" style="object-position:55% 55%"></figure>
-        <figure><img src="img/live-group.jpg" alt="Общее фото участников прошлого мероприятия в Вене" loading="lazy" style="object-position:50% 70%"></figure>
         <figure><img src="img/live-selfie.jpg" alt="Селфи в зале во время практики" loading="lazy" style="object-position:45% 62%"></figure>
+        <figure class="full"><img src="img/live-group.jpg" width="1584" height="477" alt="Общее фото участников прошлого мероприятия в Вене" loading="lazy"></figure>
       </div>
       <p class="note" style="margin-top:18px">Подробное расписание будет опубликовано дополнительно.</p>
     </div>
@@ -1439,53 +1445,71 @@ body{font-weight:500}
   /* live photo strips */
   document.querySelectorAll('.live').forEach(function(l){if(reduce||!hasIO){l.classList.add('in');return;}onView(l,.2,function(){l.classList.add('in');});});
 
+
+  /* format icons */
+  var fg=document.getElementById('fmt-grid');
+  if(fg){if(reduce||!hasIO)fg.classList.add('in');else onView(fg,.25,function(){fg.classList.add('in');});}
+
   /* road to enlightenment */
   (function(){
     var road=document.getElementById('road');if(!road)return;
     var NS='http://www.w3.org/2000/svg';
+    var STEPS=[['19–21 декабря','Шаматха и мудрость'],['Подготовка','к медитации'],['Духовный','учитель'],['Непостоянство','и смерть'],['Прибежище'],['Закон кармы'],['Колесо жизни'],['Бодхичитта'],['Обмен себя','на других'],['Шесть','совершенств'],['Полное','совершенство']];
     function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;}
     function txt(g,x,y,anc,lines,cls){var t=el('text',{x:x,y:y,'text-anchor':anc,'class':cls||''},g);lines.forEach(function(l,i){var s=el('tspan',{x:x,dy:i?20:0},t);if(i===0)s.setAttribute('class','b');s.textContent=l;});return t;}
-    var svgs=[].slice.call(road.querySelectorAll('svg')),runs=[];
-    svgs.forEach(function(svg){
-      var vert=svg.classList.contains('rv'),path=svg.querySelector('.lit'),L=path.getTotalLength(),g=svg.querySelector('.marks');
-      var F=[0,.2,.38,.56,.74,1],pts=[],lbls=[];
-      F.forEach(function(f,i){
-        var p=path.getPointAtLength(f*L);
-        if(i===F.length-1){
-          var s=el('g',{'class':'sun',transform:'translate('+p.x+' '+p.y+')'},g),r=el('g',{'class':'rays'},s);
-          for(var k=0;k<12;k++){var a=k*Math.PI/6;el('line',{x1:Math.cos(a)*30,y1:Math.sin(a)*30,x2:Math.cos(a)*(k%2?40:46),y2:Math.sin(a)*(k%2?40:46),stroke:'#ddae35','stroke-width':3,'stroke-linecap':'round'},r);}
-          el('circle',{'class':'core',r:22},s);
-          pts.push({f:f,e:s});
-        }else{
-          var pg=el('g',{'class':'pt'+(i===0?' start':''),transform:'translate('+p.x+' '+p.y+')'},g);
-          el('circle',{'class':'h',r:i===0?20:15},pg);el('circle',{'class':'c',r:i===0?13:9},pg);
-          pts.push({f:f,e:pg});
-        }
-      });
-      var p0=path.getPointAtLength(0),pm=path.getPointAtLength(.47*L),pe=path.getPointAtLength(L);
+    function build(svg,vert){
+      var id=vert?'V':'H',P,d,lab;
       if(!vert){
-        lbls.push([0,txt(g,p0.x-14,p0.y+48,'start',['19–21 декабря','первый этап · Вена + онлайн'],'lbl')]);
-        lbls.push([.47,txt(g,pm.x+10,pm.y+62,'middle',['Следующие этапы','цикла Ламрима'],'lbl')]);
-        lbls.push([1,txt(g,pe.x+10,pe.y+76,'end',['Просветление'],'lbl end-t')]);
+        var Y=[110,350,590];
+        P=[[90,Y[0]],[390,Y[0]],[690,Y[0]],[990,Y[0]],[870,Y[1]],[600,Y[1]],[330,Y[1]],[330,Y[2]],[600,Y[2]],[870,Y[2]],[1110,Y[2]]];
+        d='M90 '+Y[0]+' H1040 A120 120 0 0 1 1040 '+Y[1]+' H160 A120 120 0 0 0 160 '+Y[2]+' H1110';
+        lab=function(i,p){return [p[0],p[1]+(i===10?78:44),'middle'];};
       }else{
-        lbls.push([0,txt(g,p0.x-8,p0.y-50,'start',['19–21 декабря','первый этап · Вена + онлайн'],'lbl')]);
-        var pv=path.getPointAtLength(.64*L);lbls.push([.64,txt(g,pv.x+28,pv.y+4,'start',['Следующие этапы','цикла Ламрима'],'lbl')]);
-        lbls.push([1,txt(g,pe.x-58,pe.y+6,'end',['Просветление'],'lbl end-t')]);
+        P=[];for(var i=0;i<11;i++)P.push([i%2?110:50,50+i*92]);
+        d='M'+P[0][0]+' '+P[0][1];for(var i=1;i<11;i++){var a=P[i-1],b=P[i];d+=' C'+a[0]+' '+(a[1]+46)+' '+b[0]+' '+(b[1]-46)+' '+b[0]+' '+b[1];}
+        lab=function(i,p){return [158,p[1]+(STEPS[i].length>1?-4:6),'start'];};
       }
+      var defs=el('defs',{},svg);
+      var lg=el('linearGradient',{id:'roadGold'+id,x1:0,y1:0,x2:vert?0:1,y2:vert?1:0},defs);
+      [['0','#69232d'],['.3','#ddae35'],['1','#f3d991']].forEach(function(s){el('stop',{offset:s[0],'stop-color':s[1]},lg);});
+      var rg=el('radialGradient',{id:'sunGrad'+id},defs);
+      [['0','#fffbe9'],['.45','#f3d991'],['1','#ddae35']].forEach(function(s){el('stop',{offset:s[0],'stop-color':s[1]},rg);});
+      el('path',{'class':'base',d:d},svg);el('path',{'class':'dash',d:d},svg);
+      var path=el('path',{'class':'lit',d:d,stroke:'url(#roadGold'+id+')'},svg);
+      var g=el('g',{'class':'marks'},svg),L=path.getTotalLength(),N=800,S=[];
+      for(var k=0;k<=N;k++){var q=path.getPointAtLength(L*k/N);S.push([q.x,q.y]);}
+      function frac(p){var best=0,bd=1e9;S.forEach(function(q,k){var dd=(q[0]-p[0])*(q[0]-p[0])+(q[1]-p[1])*(q[1]-p[1]);if(dd<bd){bd=dd;best=k;}});return best/N;}
+      var pts=[],lbls=[];
+      P.forEach(function(p,i){
+        var f=i===10?1:frac(p),e;
+        if(i===10){
+          e=el('g',{'class':'sun',transform:'translate('+p[0]+' '+p[1]+')'},g);var r=el('g',{'class':'rays'},e);
+          for(var k=0;k<12;k++){var a=k*Math.PI/6;el('line',{x1:Math.cos(a)*30,y1:Math.sin(a)*30,x2:Math.cos(a)*(k%2?40:46),y2:Math.sin(a)*(k%2?40:46),stroke:'#ddae35','stroke-width':3,'stroke-linecap':'round'},r);}
+          el('circle',{'class':'core',r:22,fill:'url(#sunGrad'+id+')'},e);
+        }else{
+          e=el('g',{'class':'pt'+(i===0?' start':''),transform:'translate('+p[0]+' '+p[1]+')'},g);
+          el('circle',{'class':'h',r:i===0?20:15},e);el('circle',{'class':'c',r:i===0?13:9},e);
+        }
+        pts.push({f:f,e:e});
+        var L0=lab(i,p),t=txt(g,L0[0],L0[1],L0[2],STEPS[i],'lbl'+(i===10?' end-t':'')+(i===0?' start-t':''));
+        lbls.push([f,t]);
+      });
+      var hp=P[0];el('text',{'class':'here lbl on',x:vert?158:hp[0],y:vert?hp[1]-28:hp[1]-34,'text-anchor':vert?'start':'middle'},g).textContent='ВЫ НАЧИНАЕТЕ ЗДЕСЬ';
       path.style.strokeDasharray=L;path.style.strokeDashoffset=L;
-      runs.push({path:path,L:L,pts:pts,lbls:lbls,svg:svg});
-    });
+      return {path:path,L:L,pts:pts,lbls:lbls};
+    }
+    var runs=[build(road.querySelector('.rh'),false),build(road.querySelector('.rv'),true)];
     var raf=null;
-    function set(r,t){r.path.style.strokeDashoffset=r.L*(1-t);r.pts.forEach(function(p){p.e.classList.toggle('on',t>=p.f-.001);});r.lbls.forEach(function(l){l[1].classList.toggle('on',t>=l[0]-.02);});}
+    function set(r,t){r.path.style.strokeDashoffset=r.L*(1-t);r.pts.forEach(function(p){p.e.classList.toggle('on',t>=p.f-.002);});r.lbls.forEach(function(l){l[1].classList.toggle('on',t>=l[0]-.02);});}
     function play(){
       if(raf)cancelAnimationFrame(raf);
       if(reduce){runs.forEach(function(r){set(r,1);});return;}
-      var t0=null,D=4200;
+      var t0=null,D=7000;
       function step(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/D),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;runs.forEach(function(r){set(r,e);});if(k<1)raf=requestAnimationFrame(step);}
       raf=requestAnimationFrame(step);
     }
     runs.forEach(function(r){set(r,0);});
-    onView(road,.35,function(first){if(first)play();});
+    onView(road,.3,function(first){if(first)play();});
   })();
 
   /* falling Tibetan letters */
