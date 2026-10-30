@@ -303,6 +303,35 @@ body{font-weight:500}
 .cyc-grid li:last-child{background:linear-gradient(120deg,#f8e6b4,#f3cfc0)}
 .cyc-grid li:last-child .n{background:var(--burg)}
 
+/* road to enlightenment */
+.road{position:relative;margin-top:16px;border-radius:var(--r-card);background:linear-gradient(160deg,var(--white) 0%,#f8efe2 100%);box-shadow:0 30px 60px -40px rgba(105,35,45,.35);padding:clamp(18px,3vw,34px);overflow:hidden}
+.road svg{display:block;width:100%;height:auto;overflow:visible}
+.road .rv{display:none}
+.road .base{fill:none;stroke:var(--cream-2);stroke-width:26;stroke-linecap:round}
+.road .dash{fill:none;stroke:#fffdf9;stroke-width:2.5;stroke-dasharray:10 12;stroke-linecap:round}
+.road .lit{fill:none;stroke:url(#roadGold);stroke-width:8;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(221,174,53,.75))}
+.road .rv .lit{stroke:url(#roadGoldV)}
+.road .pt circle.c{fill:#fffdf9;stroke:var(--cream-2);stroke-width:4;transition:fill .5s,stroke .5s,r .5s}
+.road .pt circle.h{fill:rgba(221,174,53,.35);opacity:0;transform-box:fill-box;transform-origin:center;transition:opacity .5s}
+.road .pt.on circle.c{fill:var(--gold);stroke:#fffdf9}
+.road .pt.on circle.h{opacity:1;animation:ptPulse 2.2s ease-in-out infinite}
+.road .pt.start circle.c{fill:var(--burg);stroke:#fffdf9}
+.road .pt.start.on circle.c{fill:var(--burg)}
+@keyframes ptPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.7);opacity:.15}}
+.road text{font-family:var(--sans);font-size:15px;font-weight:600;fill:var(--text-dm)}
+.road text .b{font-family:var(--display);font-weight:700;font-size:17px;fill:var(--text-d)}
+.road text.end-t .b{fill:var(--burg)}
+.road .lbl{opacity:0;transition:opacity .6s}
+.road .lbl.on{opacity:1}
+.road .sun .rays{transform-box:fill-box;transform-origin:center;animation:rays 18s linear infinite;opacity:.25;transition:opacity .8s}
+.road .sun .core{fill:url(#sunGrad);opacity:.35;transition:opacity .8s}
+.road .rv .sun .core{fill:url(#sunGradV)}
+.road .sun.on .rays{opacity:1}
+.road .sun.on .core{opacity:1;filter:drop-shadow(0 0 18px rgba(221,174,53,.95))}
+@keyframes rays{to{transform:rotate(360deg)}}
+@media (max-width:640px){.road .rh{display:none}.road .rv{display:block}}
+@media (prefers-reduced-motion: reduce){.road .pt.on circle.h,.road .sun .rays{animation:none}}
+
 /* december */
 .shower{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
 .fall{position:absolute;top:-24px;width:var(--sz);height:var(--sz);background:var(--gold);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);opacity:0;animation:fall var(--dur) cubic-bezier(.35,.1,.6,1) forwards;filter:drop-shadow(0 0 4px rgba(243,217,145,.9))}
@@ -950,6 +979,24 @@ body{font-weight:500}
           <li><span class="n">4</span>увидите связь между медитацией, мудростью и пустотой;</li>
           <li><span class="n">5</span>получите практики, которые сможете включить в ежедневную жизнь.</li>
         </ul>
+        <div class="road" id="road">
+          <svg class="rh" viewBox="0 0 1200 320" role="img" aria-label="Путь: первый этап 19–21 декабря, следующие этапы цикла Ламрима, просветление">
+            <defs>
+              <linearGradient id="roadGold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#69232d"/><stop offset=".35" stop-color="#ddae35"/><stop offset="1" stop-color="#f3d991"/></linearGradient>
+              <radialGradient id="sunGrad"><stop offset="0" stop-color="#fffbe9"/><stop offset=".45" stop-color="#f3d991"/><stop offset="1" stop-color="#ddae35"/></radialGradient>
+            </defs>
+            <path class="base" d="M70 230 C 200 250 230 120 360 135 S 540 260 690 210 S 880 70 1010 95 S 1090 85 1120 80"/><path class="dash" d="M70 230 C 200 250 230 120 360 135 S 540 260 690 210 S 880 70 1010 95 S 1090 85 1120 80"/><path class="lit" d="M70 230 C 200 250 230 120 360 135 S 540 260 690 210 S 880 70 1010 95 S 1090 85 1120 80"/>
+            <g class="marks"></g>
+          </svg>
+          <svg class="rv" viewBox="0 0 360 660" role="img" aria-label="Путь: первый этап 19–21 декабря, следующие этапы цикла Ламрима, просветление">
+            <defs>
+              <linearGradient id="roadGoldV" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#69232d"/><stop offset=".35" stop-color="#ddae35"/><stop offset="1" stop-color="#f3d991"/></linearGradient>
+              <radialGradient id="sunGradV"><stop offset="0" stop-color="#fffbe9"/><stop offset=".45" stop-color="#f3d991"/><stop offset="1" stop-color="#ddae35"/></radialGradient>
+            </defs>
+            <path class="base" d="M60 90 C 260 90 310 190 200 245 S 40 340 130 410 S 330 470 280 570"/><path class="dash" d="M60 90 C 260 90 310 190 200 245 S 40 340 130 410 S 330 470 280 570"/><path class="lit" d="M60 90 C 260 90 310 190 200 245 S 40 340 130 410 S 330 470 280 570"/>
+            <g class="marks"></g>
+          </svg>
+        </div>
       </div>
     </section>
   </div>
@@ -1359,6 +1406,56 @@ body{font-weight:500}
     var armed=true;
     new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){enter(armed);armed=false;}else{armed=true;if(leave)leave();}});},{threshold:thr}).observe(el);
   }
+
+
+  /* road to enlightenment */
+  (function(){
+    var road=document.getElementById('road');if(!road)return;
+    var NS='http://www.w3.org/2000/svg';
+    function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;}
+    function txt(g,x,y,anc,lines,cls){var t=el('text',{x:x,y:y,'text-anchor':anc,'class':cls||''},g);lines.forEach(function(l,i){var s=el('tspan',{x:x,dy:i?20:0},t);if(i===0)s.setAttribute('class','b');s.textContent=l;});return t;}
+    var svgs=[].slice.call(road.querySelectorAll('svg')),runs=[];
+    svgs.forEach(function(svg){
+      var vert=svg.classList.contains('rv'),path=svg.querySelector('.lit'),L=path.getTotalLength(),g=svg.querySelector('.marks');
+      var F=[0,.2,.38,.56,.74,1],pts=[],lbls=[];
+      F.forEach(function(f,i){
+        var p=path.getPointAtLength(f*L);
+        if(i===F.length-1){
+          var s=el('g',{'class':'sun',transform:'translate('+p.x+' '+p.y+')'},g),r=el('g',{'class':'rays'},s);
+          for(var k=0;k<12;k++){var a=k*Math.PI/6;el('line',{x1:Math.cos(a)*30,y1:Math.sin(a)*30,x2:Math.cos(a)*(k%2?40:46),y2:Math.sin(a)*(k%2?40:46),stroke:'#ddae35','stroke-width':3,'stroke-linecap':'round'},r);}
+          el('circle',{'class':'core',r:22},s);
+          pts.push({f:f,e:s});
+        }else{
+          var pg=el('g',{'class':'pt'+(i===0?' start':''),transform:'translate('+p.x+' '+p.y+')'},g);
+          el('circle',{'class':'h',r:i===0?20:15},pg);el('circle',{'class':'c',r:i===0?13:9},pg);
+          pts.push({f:f,e:pg});
+        }
+      });
+      var p0=path.getPointAtLength(0),pm=path.getPointAtLength(.47*L),pe=path.getPointAtLength(L);
+      if(!vert){
+        lbls.push([0,txt(g,p0.x-14,p0.y+48,'start',['19–21 декабря','первый этап · Вена + онлайн'],'lbl')]);
+        lbls.push([.47,txt(g,pm.x+10,pm.y+62,'middle',['Следующие этапы','цикла Ламрима'],'lbl')]);
+        lbls.push([1,txt(g,pe.x+10,pe.y+76,'end',['Просветление'],'lbl end-t')]);
+      }else{
+        lbls.push([0,txt(g,p0.x-8,p0.y-50,'start',['19–21 декабря','первый этап · Вена + онлайн'],'lbl')]);
+        var pv=path.getPointAtLength(.64*L);lbls.push([.64,txt(g,pv.x+28,pv.y+4,'start',['Следующие этапы','цикла Ламрима'],'lbl')]);
+        lbls.push([1,txt(g,pe.x-58,pe.y+6,'end',['Просветление'],'lbl end-t')]);
+      }
+      path.style.strokeDasharray=L;path.style.strokeDashoffset=L;
+      runs.push({path:path,L:L,pts:pts,lbls:lbls,svg:svg});
+    });
+    var raf=null;
+    function set(r,t){r.path.style.strokeDashoffset=r.L*(1-t);r.pts.forEach(function(p){p.e.classList.toggle('on',t>=p.f-.001);});r.lbls.forEach(function(l){l[1].classList.toggle('on',t>=l[0]-.02);});}
+    function play(){
+      if(raf)cancelAnimationFrame(raf);
+      if(reduce){runs.forEach(function(r){set(r,1);});return;}
+      var t0=null,D=4200;
+      function step(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/D),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;runs.forEach(function(r){set(r,e);});if(k<1)raf=requestAnimationFrame(step);}
+      raf=requestAnimationFrame(step);
+    }
+    runs.forEach(function(r){set(r,0);});
+    onView(road,.35,function(first){if(first)play();});
+  })();
 
   /* falling Tibetan letters */
   var pr=document.getElementById('practice'),lbox=pr&&pr.querySelector('.letters');
