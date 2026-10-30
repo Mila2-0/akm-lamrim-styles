@@ -238,7 +238,7 @@ b,strong{font-weight:800}
 .use .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#f8e6b4,#f3cfc0);color:var(--burg)}
 .use .ic svg{width:28px;height:28px}
 .use p{font-size:15.5px;line-height:1.5}
-.use.main{grid-column:span 2;background:linear-gradient(160deg,var(--ink-3) 0%,var(--ink) 80%);color:var(--text-l)}
+.use.main{grid-column:1/-1;background:linear-gradient(160deg,var(--ink-3) 0%,var(--ink) 80%);color:var(--text-l)}
 .use.main h3{color:var(--text-l)}
 .use.main p{color:var(--text-lm)}
 .use.main .ic{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--ink)}
@@ -248,8 +248,8 @@ b,strong{font-weight:800}
 
 /* 2027 */
 .goal{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:stretch}
-.goal-main{display:flex;flex-direction:column;gap:18px;justify-content:center;text-align:left}
-.goal-sum{white-space:nowrap;font-family:var(--display);font-weight:800;font-size:clamp(40px,6vw,84px);line-height:.95;letter-spacing:-.05em}
+.goal-main{container-type:inline-size;display:flex;flex-direction:column;gap:18px;justify-content:center;text-align:left}
+.goal-sum{white-space:nowrap;font-family:var(--display);font-weight:800;font-size:clamp(30px,14cqi,96px);line-height:.95;letter-spacing:-.05em}
 .goal-sum small{font-size:.4em;letter-spacing:0}
 .goal-split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .goal-split div{border-radius:20px;padding:16px 18px;background:rgba(247,239,230,.06);border:1px solid var(--line-l)}
@@ -588,13 +588,13 @@ b,strong{font-weight:800}
         <div class="uses">
           <div class="use main reveal">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.4"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><path d="M15.5 14.6c2.6-.4 4.8 1.1 5.5 4.4"/></svg></span>
-            <h3>Команда Академии</h3>
-            <p>Самая большая статья. Люди, которые каждый день организуют курсы и мероприятия, ведут маркетинг, поддерживают студентов и тренеров, готовят материалы.</p>
+            <h3>Зарплата команды АКМ</h3>
+            <p>Люди, которые каждый день организуют курсы и мероприятия, ведут маркетинг, поддерживают студентов и тренеров, готовят материалы.</p>
           </div>
           <div class="use reveal">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M7 10.5V15c0 1.4 2.2 3 5 3s5-1.6 5-3v-4.5"/><path d="M21 8v5"/></svg></span>
-            <h3>Обучение тренеров</h3>
-            <p>Курсы для преподавателей ACI и медитации — ТТ и МТТ. Больше тренеров — больше новых курсов и городов.</p>
+            <h3>Подготовка тренеров</h3>
+            <p>Организация курсов для подготовки тренеров — тех, кто преподаёт курсы ACI, и тренеров по медитации.</p>
           </div>
           <div class="use reveal">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M7.5 9.5l2 2-2 2M12 13.5h4"/></svg></span>
@@ -609,14 +609,18 @@ b,strong{font-weight:800}
           <div class="use reveal">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4l-5.2 2.7 1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
             <h3>Мероприятия с Учителями</h3>
-            <p>Ретрит в Малайзии, посвящение с Геше Майклом, учения по Ламриму, Сутра сердца и другие события 2026 года.</p>
+            <p>Организация живых и онлайн-мероприятий с Учителями.</p>
           </div>
           <div class="use reveal">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M12 9v12M3 13h18"/><path d="M12 9c-1.5-3-5-4-5.5-2S9 9 12 9zM12 9c1.5-3 5-4 5.5-2S15 9 12 9z"/></svg></span>
             <h3>Подарки студентам</h3>
             <p>Розыгрыши в Клубе медитации, подарки и скидки студентам, Глюкбук.</p>
           </div>
-          <p class="use-note reveal">Также — налоги, банковские расходы и открытие нового юрлица, чтобы Академия работала прозрачно и законно.</p>
+          <div class="use reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg></span>
+            <h3>Налоги и банковские расходы</h3>
+            <p>Чтобы Академия работала прозрачно и законно.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -649,7 +653,7 @@ b,strong{font-weight:800}
             <li><span class="n">02</span><div>Новые тренеры и локации<span>курсы для преподавателей, поддержка городов и организаторов</span></div></li>
             <li><span class="n">03</span><div>Платформа и приложение<span>доработка мобильного приложения и технические сервисы</span></div></li>
             <li><span class="n">04</span><div>Учения и мероприятия<span>онлайн и вживую, вместе с Учителями</span></div></li>
-            <li><span class="n">05</span><div>Команда Академии<span>люди, которые делают всё это возможным</span></div></li>
+            <li><span class="n">05</span><div>Зарплата команды АКМ<span>люди, которые делают всё это возможным</span></div></li>
           </ul>
         </div>
       </div>
@@ -734,7 +738,6 @@ b,strong{font-weight:800}
       </div>
       <div class="stories">
         <div class="story reveal"><div class="video"><button class="yt" data-id="gqg8evzbAAY" aria-label="Смотреть: Максим Джабали"><img src="https://i.ytimg.com/vi/gqg8evzbAAY/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></button></div><h3>Максим Джабали</h3></div>
-        <div class="story reveal"><div class="video"><button class="yt" data-id="LNjL10Giq9c" aria-label="Смотреть: Евгений и Юлия Беляевы"><img src="https://i.ytimg.com/vi/LNjL10Giq9c/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></button></div><h3>Евгений и Юлия Беляевы</h3></div>
         <div class="story reveal"><div class="video"><button class="yt" data-id="IdHca5gXl54" aria-label="Смотреть: Рауза Дуйсебаева"><img src="https://i.ytimg.com/vi/IdHca5gXl54/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></button></div><h3>Рауза Дуйсебаева</h3></div>
         <div class="story reveal"><div class="video"><button class="yt" data-id="epJrRLMT2hw" aria-label="Смотреть: Людмила Мишанина"><img src="https://i.ytimg.com/vi/epJrRLMT2hw/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></button></div><h3>Людмила Мишанина</h3></div>
         <div class="story reveal"><div class="video"><button class="yt" data-id="BQCsy7OXZoo" aria-label="Смотреть: Наталья Пашутина"><img src="https://i.ytimg.com/vi/BQCsy7OXZoo/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></button></div><h3>Наталья Пашутина</h3></div>
