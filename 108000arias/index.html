@@ -224,12 +224,13 @@ b,strong{font-weight:800}
 .bar-lbls b{display:block;font-family:var(--display);font-size:18px;color:var(--text-l)}
 .bar-lbls span{font-size:13.5px;color:var(--text-lm)}
 .growth-note{display:inline-flex;gap:10px;align-items:center;padding:8px 16px;border-radius:999px;background:rgba(221,174,53,.14);border:1px solid rgba(221,174,53,.4);color:var(--gold-l);font-weight:800;font-size:14px}
-.academy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:16px;align-items:stretch}
-.academy .mini{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
-.academy .mini div,.goal-split div{min-width:0;overflow-wrap:anywhere;hyphens:auto}
-.academy .mini div{border-radius:20px;padding:16px 18px;background:rgba(247,239,230,.06);border:1px solid var(--line-l)}
-.academy .mini b{display:block;font-family:var(--display);font-size:clamp(24px,2.4vw,32px);line-height:1.1;color:var(--gold-l)}
-.academy .mini span{font-size:13.5px;color:var(--text-lm)}
+.academy{margin-top:16px}
+.academy .mini div,.goal-split div{min-width:0;overflow-wrap:break-word}
+.ac-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 40px;align-items:end}
+.academy .mini{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.academy .mini div{border-radius:20px;padding:18px 20px;background:rgba(247,239,230,.06);border:1px solid var(--line-l)}
+.academy .mini b{display:block;font-family:var(--display);font-size:clamp(26px,2.6vw,38px);line-height:1.1;color:var(--gold-l);white-space:nowrap}
+.academy .mini span{display:block;margin-top:4px;line-height:1.4;font-size:13.5px;color:var(--text-lm)}
 
 /* where money goes */
 .uses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
@@ -373,7 +374,9 @@ b,strong{font-weight:800}
   .steps li:last-child{grid-column:1/-1}
 }
 @media (max-width:960px){
-  .thanks,.mission,.academy,.goal,.pay-row,.extras,.karma,.vol{grid-template-columns:1fr}
+  .ac-head{grid-template-columns:1fr}
+  .academy .mini{grid-template-columns:1fr 1fr}
+  .thanks,.mission,.goal,.pay-row,.extras,.karma,.vol{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr}
   .uses{grid-template-columns:1fr 1fr}
   .stories{grid-template-columns:1fr 1fr}
@@ -552,21 +555,21 @@ b,strong{font-weight:800}
         </div>
       </div>
 
-      <div class="academy">
-        <div class="card glass reveal">
-          <span class="eyebrow">Об Академии</span>
-          <p class="big" style="color:var(--white);margin-top:12px">С 2019 года — 10-кратный рост сообщества</p>
-          <p style="margin-top:10px">Наш регион — одно из самых масштабных и развитых сообществ среди всех стран, где преподаётся ACI. Мы лидируем по количеству новых курсов, и у нас есть своя платформа для прохождения курсов.</p>
-          <div class="mini">
-            <div><b>2 283</b><span>сертифицированных студента в 2024 году (в 2019 — 100)</span></div>
-            <div><b>8 548</b><span>сертифицированных курсов в 2024 году (в 2019 — 275)</span></div>
+      <div class="academy card glass reveal">
+        <div class="ac-head">
+          <div>
+            <span class="eyebrow">Об Академии</span>
+            <p class="big" style="color:var(--white);margin-top:12px">С 2019 года — в 33 раза больше студентов</p>
           </div>
+          <p>Наш регион — одно из самых масштабных и развитых сообществ среди всех стран, где преподаётся ACI. Мы лидируем по количеству новых курсов, и у нас есть своя платформа для прохождения курсов.</p>
         </div>
-        <div class="video reveal" style="aspect-ratio:auto;min-height:280px">
-          <button class="yt" data-id="eTe7iSAgcwE" aria-label="Итоги 2024 года" data-skip="1" style="cursor:default">
-            <img src="img/itogi-2024.jpg" alt="Итоги 2024 Академии Классической Мудрости" loading="lazy">
-          </button>
+        <div class="mini">
+          <div><b data-count="3332">3 332</b><span>студента изучают курсы ACI (в 2019 году — 100)</span></div>
+          <div><b data-count="13606">13 606</b><span>сертификатов ACI (в 2019 году — 275)</span></div>
+          <div><b data-count="103">103</b><span>студента прошли все 18 открытых курсов ACI</span></div>
+          <div><b data-count="33">33</b><span>живых курса ACI в 2025 году, их провёл 61 тренер</span></div>
         </div>
+        <p class="note" style="margin-top:14px">Данные платформы курсов на 30 июня 2026 года.</p>
       </div>
     </div>
   </section>
